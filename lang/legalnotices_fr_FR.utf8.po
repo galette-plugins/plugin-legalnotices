@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-20 10:21+0100\n"
-"PO-Revision-Date: 2025-03-20 10:25+0100\n"
+"POT-Creation-Date: 2025-12-09 12:59+0100\n"
+"PO-Revision-Date: 2025-12-09 13:04+0100\n"
 "Last-Translator: Guillaume AGNIERAY <dev@agnieray.net>\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -16,10 +16,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.2.2\n"
+"X-Generator: Poedit 3.6\n"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:77
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:67
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:58
 msgid "Pages content"
 msgstr "Contenu des pages"
 
@@ -58,25 +58,25 @@ msgstr "Lien vers le numéro de téléphone de votre association"
 msgid "Your organisation email address link"
 msgstr "Lien vers l'adresse email de votre association"
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:540
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:547
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:100
 #: ../tempcache/scripts.html.twig:88
 msgid "Legal Information"
 msgstr "Informations légales"
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:548
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:555
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:110
 #: ../tempcache/scripts.html.twig:76
 msgid "Terms of Service"
 msgstr "Conditions générales d'utilisation"
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:556
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:563
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:120
 #: ../tempcache/scripts.html.twig:64
 msgid "Privacy Policy"
 msgstr "Politique de confidentialité"
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:592
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:603
 msgid "Specific to the Legal Notices plugin"
 msgstr "Spécifique au plugin Mentions Légales"
 
@@ -236,15 +236,23 @@ msgid ""
 "setting the options above related to the cookie becomes irrelevant."
 msgstr ""
 "Par défaut, les informations de consentement sont stockées dans le "
-"navigateur avec un cookie. Activez cette option si vous souhaitez utiliser « "
-"locaStorage » à la place. Si cette option est activée, le paramétrage des "
+"navigateur avec un cookie. Activez cette option si vous souhaitez utiliser "
+"« locaStorage » à la place. Si cette option est activée, le paramétrage des "
 "options ci-dessus liées au cookie devient inutile."
 
-#: ../tempcache/scripts.html.twig:145
+#: ../tempcache/scripts.html.twig:106
+msgid ""
+"The consent manager could not be loaded. It may have been blocked by an ad "
+"blocker."
+msgstr ""
+"Le gestionnaire de consentement n'a pas pu être chargé. Il a peut-être été "
+"bloqué par un bloqueur de publicités."
+
+#: ../tempcache/scripts.html.twig:155
 msgid "Services we would like to use"
 msgstr "Services que nous souhaitons utiliser"
 
-#: ../tempcache/scripts.html.twig:149
+#: ../tempcache/scripts.html.twig:159
 msgid ""
 "Here you can assess and customize the services that we'd like to use on this "
 "website. You're in charge! Enable or disable services as you see fit."
@@ -253,17 +261,17 @@ msgstr ""
 "utiliser sur ce site. C'est vous qui décidez ! Activez ou désactivez les "
 "services comme bon vous semble."
 
-#: ../tempcache/scripts.html.twig:155
+#: ../tempcache/scripts.html.twig:165
 msgid "Testing mode!"
 msgstr "Mode test !"
 
-#: ../tempcache/scripts.html.twig:159
+#: ../tempcache/scripts.html.twig:169
 msgid "There were changes since your last visit, please renew your consent."
 msgstr ""
 "Il y a eu des changements depuis votre dernière visite, veuillez renouveler "
 "votre consentement."
 
-#: ../tempcache/scripts.html.twig:163
+#: ../tempcache/scripts.html.twig:173
 msgid ""
 "Hi! Could we please enable some additional services for {purposes}? You can "
 "always change or withdraw your consent later."
@@ -272,15 +280,15 @@ msgstr ""
 "{purposes}? Vous pouvez toujours modifier ou retirer votre consentement plus "
 "tard."
 
-#: ../tempcache/scripts.html.twig:167
+#: ../tempcache/scripts.html.twig:177
 msgid "Let me choose"
 msgstr "Laissez-moi choisir"
 
-#: ../tempcache/scripts.html.twig:174
+#: ../tempcache/scripts.html.twig:184
 msgid "Service Provision"
 msgstr "Prestation de services"
 
-#: ../tempcache/scripts.html.twig:178
+#: ../tempcache/scripts.html.twig:188
 msgid ""
 "These services are essential for the correct functioning of this website. "
 "You cannot disable them here as the service would not work correctly "
@@ -290,11 +298,11 @@ msgstr ""
 "pouvez pas les désactiver ici car le service ne fonctionnerait pas "
 "correctement autrement."
 
-#: ../tempcache/scripts.html.twig:184
+#: ../tempcache/scripts.html.twig:194
 msgid "Performance Optimization"
 msgstr "Optimisation de la performance"
 
-#: ../tempcache/scripts.html.twig:188
+#: ../tempcache/scripts.html.twig:198
 msgid ""
 "These services process personal information to optimize the service that "
 "this website offers."
@@ -302,11 +310,11 @@ msgstr ""
 "Ces services traitent les informations personnelles afin d'optimiser le "
 "service que ce site Web offre."
 
-#: ../tempcache/scripts.html.twig:194
+#: ../tempcache/scripts.html.twig:204
 msgid "Analytics"
 msgstr "Mesure d'audience"
 
-#: ../tempcache/scripts.html.twig:198
+#: ../tempcache/scripts.html.twig:208
 msgid ""
 "These services process personal information to let us know how you use this "
 "website."
@@ -314,11 +322,11 @@ msgstr ""
 "Ces services traitent des informations personnelles pour nous permettre de "
 "savoir comment vous utilisez ce site Web."
 
-#: ../tempcache/scripts.html.twig:204
+#: ../tempcache/scripts.html.twig:214
 msgid "Marketing"
 msgstr "Marketing"
 
-#: ../tempcache/scripts.html.twig:208
+#: ../tempcache/scripts.html.twig:218
 msgid ""
 "These services process personal information to show you relevant content "
 "about products, services or topics that you might be interested in."
@@ -327,11 +335,11 @@ msgstr ""
 "un contenu pertinent sur les produits, les services ou les sujets qui "
 "pourraient vous intéresser."
 
-#: ../tempcache/scripts.html.twig:214
+#: ../tempcache/scripts.html.twig:224
 msgid "Advertising"
 msgstr "Publicité"
 
-#: ../tempcache/scripts.html.twig:218
+#: ../tempcache/scripts.html.twig:228
 msgid ""
 "These services process personal information to show you personalized or "
 "interest-based advertisements."
@@ -339,95 +347,95 @@ msgstr ""
 "Ces services traitent les informations personnelles pour vous présenter des "
 "publicités personnalisées ou basées sur des intérêts."
 
-#: ../tempcache/scripts.html.twig:225
+#: ../tempcache/scripts.html.twig:235
 msgid "service"
 msgstr "service"
 
-#: ../tempcache/scripts.html.twig:229
+#: ../tempcache/scripts.html.twig:239
 msgid "services"
 msgstr "services"
 
-#: ../tempcache/scripts.html.twig:234
+#: ../tempcache/scripts.html.twig:244
 msgid "That's ok"
 msgstr "C'est bon"
 
-#: ../tempcache/scripts.html.twig:238
+#: ../tempcache/scripts.html.twig:248
 msgid "Save"
 msgstr "Enregistrer"
 
-#: ../tempcache/scripts.html.twig:242
+#: ../tempcache/scripts.html.twig:252
 msgid "I decline"
 msgstr "Je refuse"
 
-#: ../tempcache/scripts.html.twig:246
+#: ../tempcache/scripts.html.twig:256
 msgid "Close"
 msgstr "Fermer"
 
-#: ../tempcache/scripts.html.twig:250
+#: ../tempcache/scripts.html.twig:260
 msgid "Accept all"
 msgstr "Accepter tout"
 
-#: ../tempcache/scripts.html.twig:254
+#: ../tempcache/scripts.html.twig:264
 msgid "Accept selected"
 msgstr "Accepter sélectionné"
 
-#: ../tempcache/scripts.html.twig:263
+#: ../tempcache/scripts.html.twig:273
 msgid "privacy policy"
 msgstr "politique de confidentialité"
 
-#: ../tempcache/scripts.html.twig:267
+#: ../tempcache/scripts.html.twig:277
 msgid "To learn more, please read our {privacyPolicy}."
 msgstr "Pour en savoir plus, veuillez lire notre {privacyPolicy}."
 
-#: ../tempcache/scripts.html.twig:274
+#: ../tempcache/scripts.html.twig:284
 msgid "Enable or disable all services"
 msgstr "Activer ou désactiver tous les services"
 
-#: ../tempcache/scripts.html.twig:278
+#: ../tempcache/scripts.html.twig:288
 msgid "Use this switch to enable or disable all services."
 msgstr "Utilisez ce commutateur pour activer ou désactiver tous les services."
 
-#: ../tempcache/scripts.html.twig:284
+#: ../tempcache/scripts.html.twig:294
 msgid "(opt-out)"
 msgstr "(opt-out)"
 
-#: ../tempcache/scripts.html.twig:288
+#: ../tempcache/scripts.html.twig:298
 msgid "This service is loaded by default (but you can opt out)"
 msgstr "Ce service est chargé par défaut (mais vous pouvez le désactiver)"
 
-#: ../tempcache/scripts.html.twig:294
+#: ../tempcache/scripts.html.twig:304
 msgid "(always required)"
 msgstr "(toujours requis)"
 
-#: ../tempcache/scripts.html.twig:298
+#: ../tempcache/scripts.html.twig:308
 msgid "This services is always required"
 msgstr "Ce service est toujours nécessaire"
 
-#: ../tempcache/scripts.html.twig:303
+#: ../tempcache/scripts.html.twig:313
 msgid "purposes:"
 msgstr "fins:"
 
-#: ../tempcache/scripts.html.twig:307
+#: ../tempcache/scripts.html.twig:317
 msgid "purpose:"
 msgstr "objet:"
 
-#: ../tempcache/scripts.html.twig:312
+#: ../tempcache/scripts.html.twig:322
 msgid "Realized with Klaro!"
 msgstr "Réalisé avec Klaro !"
 
-#: ../tempcache/scripts.html.twig:317
+#: ../tempcache/scripts.html.twig:327
 msgid "Do you want to load external content supplied by {title}?"
 msgstr "Vous souhaitez charger un contenu externe fourni par {title}?"
 
-#: ../tempcache/scripts.html.twig:321
+#: ../tempcache/scripts.html.twig:331
 msgid "Yes"
 msgstr "Oui"
 
-#: ../tempcache/scripts.html.twig:325
+#: ../tempcache/scripts.html.twig:335
 msgid "Always"
 msgstr "Toujours"
 
-#: ../tempcache/scripts.html.twig:340
+#: ../tempcache/scripts.html.twig:350
 msgid ""
 "The cookies used by Galette do not store your personal data and do not track "
 "you."
@@ -435,6 +443,6 @@ msgstr ""
 "Les cookies utilisés par Galette ne stockent pas vos données personnelles et "
 "ne vous suivent pas."
 
-#: ../tempcache/scripts.html.twig:349
+#: ../tempcache/scripts.html.twig:359
 msgid "Consent Manager"
 msgstr "Gestionnaire de consentement"

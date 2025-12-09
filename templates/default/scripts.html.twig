@@ -39,6 +39,13 @@
         {% endif %}
     {% endif %}
     {% if settings.enable_cmp == '1' %}
+        function openConsentManager() {
+            if (typeof klaro !== 'undefined') {
+                return klaro.show();
+            } else {
+                alert("{{ _T("The consent manager could not be loaded. It may have been blocked by an ad blocker.", "legalnotices")|raw }}");
+            }
+        }
         var klaroConfig = {
         {% if settings.enable_localstorage == 1 %}
             storageMethod: 'localStorage',
@@ -141,7 +148,7 @@
                 }
             ]
         };
-        let cmp_link = '<a class="item" onclick="klaro.show();" href="#"><i class="shield alternate icon" aria-hidden="true"></i>{{ _T("Consent Manager", "legalnotices") }}</a>';
+        let cmp_link = '<a class="item" onclick="openConsentManager();" href="#"><i class="shield alternate icon" aria-hidden="true"></i>{{ _T("Consent Manager", "legalnotices") }}</a>';
         footer_links.insertAdjacentHTML('beforeend', cmp_link);
     {% endif %}
     </script>
