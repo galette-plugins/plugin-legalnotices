@@ -49,12 +49,10 @@ class MainController extends AbstractPluginController
     /**
      * List pages
      *
-     * @param Request  $request  PSR Request
-     * @param Response $response PSR Response
-     * @param ?string  $lang     Language
-     * @param ?string  $name     Page name
+     * @param ?string $lang Language
+     * @param ?string $name Page name
      */
-    public function listPages(Request $request, Response $response, ?string $lang = null, ?string $name = null): Response
+    public function listPages(Response $response, ?string $lang = null, ?string $name = null): Response
     {
         if ($lang === null) {
             $lang = $this->preferences->pref_lang;
@@ -89,9 +87,6 @@ class MainController extends AbstractPluginController
 
     /**
      * Change page
-     *
-     * @param Request  $request  PSR Request
-     * @param Response $response PSR Response
      */
     public function changePage(Request $request, Response $response): Response
     {
@@ -112,9 +107,6 @@ class MainController extends AbstractPluginController
 
     /**
      * Edit page
-     *
-     * @param Request  $request  PSR Request
-     * @param Response $response PSR Response
      */
     public function editPage(Request $request, Response $response): Response
     {
@@ -169,9 +161,7 @@ class MainController extends AbstractPluginController
     /**
      * View page
      *
-     * @param Request     $request  PSR Request
-     * @param Response    $response PSR Response
-     * @param string|null $name     One of 'legal-information', 'terms-of-service' or 'privacy-policy'
+     * @param string|null $name One of 'legal-information', 'terms-of-service' or 'privacy-policy'
      */
     public function viewPage(Request $request, Response $response, ?string $name = null): Response
     {
@@ -232,11 +222,8 @@ class MainController extends AbstractPluginController
 
     /**
      * Settings
-     *
-     * @param Request  $request  PSR Request
-     * @param Response $response PSR Response
      */
-    public function settings(Request $request, Response $response): Response
+    public function settings(Response $response): Response
     {
         $plugin_settings = new Settings($this->zdb);
         $settings_fields = $plugin_settings->getFieldsNames();
@@ -269,9 +256,6 @@ class MainController extends AbstractPluginController
 
     /**
      * Store Settings
-     *
-     * @param Request  $request  PSR Request
-     * @param Response $response PSR Response
      */
     public function storeSettings(Request $request, Response $response): Response
     {
