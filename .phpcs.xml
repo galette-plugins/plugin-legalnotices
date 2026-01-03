@@ -16,6 +16,8 @@
      <!-- Include the whole PSR12 standard -->
      <rule ref="PSR12"/>
 
+     <rule ref="Generic.Arrays.DisallowLongArraySyntax"/>
+
      <!-- Comments rules from PEAR standard -->
      <rule ref="PEAR.Commenting.ClassComment">
          <exclude name="PEAR.Commenting.ClassComment.MissingCategoryTag"/>
@@ -23,6 +25,26 @@
          <exclude name="PEAR.Commenting.ClassComment.MissingLicenseTag"/>
          <exclude name="PEAR.Commenting.ClassComment.MissingLinkTag"/>
      </rule>
-     <rule ref="PEAR.Commenting.FunctionComment"/>
+     <rule ref="Galette.Commenting.FunctionComment"/>
      <rule ref="PEAR.Commenting.InlineComment"/>
+
+     <!-- Type hinting -->
+     <rule ref="SlevomatCodingStandard.TypeHints.ParameterTypeHint">
+         <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification"/>
+     </rule>
+     <!-- Force native typehint on methods properties -->
+     <rule ref="SlevomatCodingStandard.TypeHints.PropertyTypeHint">
+         <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification"/>
+     </rule>
+     <!-- Force native typehint on methods return -->
+     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHint">
+         <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification"/>
+     </rule>
+     <rule ref="SlevomatCodingStandard.TypeHints.DeclareStrictTypes">
+       <properties>
+         <property name="spacesCountAroundEqualsSign" value="0"/>
+       </properties>
+     </rule>
+     <rule ref="SlevomatCodingStandard.TypeHints.LongTypeHints"/>
+     <rule ref="SlevomatCodingStandard.Variables.UnusedVariable"/>
 </ruleset>

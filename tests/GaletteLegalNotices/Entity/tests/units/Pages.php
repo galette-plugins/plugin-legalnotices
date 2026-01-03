@@ -36,8 +36,6 @@ class Pages extends GaletteTestCase
 {
     /**
      * Cleanup after each test method
-     *
-     * @return void
      */
     public function tearDown(): void
     {
@@ -48,8 +46,6 @@ class Pages extends GaletteTestCase
 
     /**
      * Test getList
-     *
-     * @return void
      */
     public function testGetList(): void
     {
@@ -97,8 +93,6 @@ class Pages extends GaletteTestCase
 
     /**
      * Test expected patterns
-     *
-     * @return void
      */
     public function testExpectedPatterns(): void
     {
@@ -127,8 +121,6 @@ class Pages extends GaletteTestCase
 
     /**
      * Test page replacements
-     *
-     * @return void
      */
     public function testReplacements(): void
     {

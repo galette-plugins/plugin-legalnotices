@@ -34,17 +34,17 @@ use Galette\Core\I18n;
  * @author Johan Cwiklinski <johan@x-tnd.be>
  * @author Guillaume AGNIERAY <dev@agnieray.net>
  *
- * @property boolean $enable_legal_information Enable Legal Information page
- * @property boolean $enable_terms_of_service Enable Terms & Conditions page
- * @property boolean $enable_privacy_policy Enable Privacy Policy page
- * @property boolean $publicpage_links Link pages in the public pages menu
- * @property boolean $fallback_language Language used for all untranslated pages
- * @property boolean $enable_cmp Enable the consent management plateform
- * @property boolean $hide_accept_all Hide the "Accept all" button
- * @property boolean $hide_decline_all Hide the "I decline" button
- * @property integer $cookie_expiration Cookie lifetime
- * @property string $cookie_domain Change the cookie domain
- * @property string $enable_localstorage Store consent information in the browser with localStorage
+ * @property bool   $enable_legal_information Enable Legal Information page
+ * @property bool   $enable_terms_of_service  Enable Terms & Conditions page
+ * @property bool   $enable_privacy_policy    Enable Privacy Policy page
+ * @property bool   $publicpage_links         Link pages in the public pages menu
+ * @property bool   $fallback_language        Language used for all untranslated pages
+ * @property bool   $enable_cmp               Enable the consent management plateform
+ * @property bool   $hide_accept_all          Hide the "Accept all" button
+ * @property bool   $hide_decline_all         Hide the "I decline" button
+ * @property int    $cookie_expiration        Cookie lifetime
+ * @property string $cookie_domain            Change the cookie domain
+ * @property string $enable_localstorage      Store consent information in the browser with localStorage
  */
 
 class Settings
@@ -92,8 +92,8 @@ class Settings
     /**
      * Main constructor
      *
-     * @param Db      $zdb  Database instance
-     * @param boolean $load Automatically load preferences on load
+     * @param Db   $zdb  Database instance
+     * @param bool $load Automatically load preferences on load
      *
      * @return void
      */
@@ -109,8 +109,6 @@ class Settings
     /**
      * Check if all fields referenced in the default array does exists,
      * create them if not
-     *
-     * @return boolean
      */
     private function checkUpdate(): bool
     {
@@ -168,8 +166,6 @@ class Settings
 
     /**
      * Load settings from the database
-     *
-     * @return boolean
      */
     public function load(): bool
     {
@@ -198,7 +194,6 @@ class Settings
     /**
      * Initialize settings at install time
      *
-     * @return boolean
      * @throws Throwable
      */
     public function installInit(): bool
@@ -256,8 +251,6 @@ class Settings
      * Check values
      *
      * @param array<string, mixed> $values Values
-     *
-     * @return void
      */
     public function check(array $values): void
     {
@@ -288,8 +281,6 @@ class Settings
 
     /**
      * Store values in the database
-     *
-     * @return boolean
      */
     public function store(): bool
     {
@@ -391,8 +382,6 @@ class Settings
      * Required for twig to access properties via __get
      *
      * @param string $name name of the property we want to retrieve
-     *
-     * @return bool
      */
     public function __isset(string $name): bool
     {
@@ -422,8 +411,6 @@ class Settings
      *
      * @param string $name  name of the property we want to assign a value to
      * @param mixed  $value a relevant value for the property
-     *
-     * @return void
      */
     public function __set(string $name, mixed $value): void
     {
@@ -453,8 +440,6 @@ class Settings
 
     /**
      * Get fallback language
-     *
-     * @return string
      */
     public function getFallbackLanguage(): string
     {
@@ -465,8 +450,6 @@ class Settings
      * Check if the specified page is disabled
      *
      * @param string $name page name
-     *
-     * @return boolean
      */
     public function isPageEnabled(string $name): bool
     {

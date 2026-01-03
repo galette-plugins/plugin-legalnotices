@@ -35,8 +35,6 @@ class Settings extends GaletteTestCase
 {
     /**
      * Cleanup after each test method
-     *
-     * @return void
      */
     public function tearDown(): void
     {
@@ -47,8 +45,6 @@ class Settings extends GaletteTestCase
 
     /**
      * Test preferences initialization
-     *
-     * @return void
      */
     public function testInstallInit(): void
     {
@@ -102,8 +98,6 @@ class Settings extends GaletteTestCase
 
     /**
      * Test fields names
-     *
-     * @return void
      */
     public function testFieldsNames(): void
     {
@@ -120,8 +114,6 @@ class Settings extends GaletteTestCase
 
     /**
      * Test settings updating when some are missing
-     *
-     * @return void
      */
     public function testUpdate(): void
     {
@@ -160,8 +152,6 @@ class Settings extends GaletteTestCase
 
     /**
      * Test __isset
-     *
-     * @return void
      */
     public function testIsset(): void
     {

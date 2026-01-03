@@ -53,8 +53,6 @@ class MainController extends AbstractPluginController
      * @param Response $response PSR Response
      * @param ?string  $lang     Language
      * @param ?string  $name     Page name
-     *
-     * @return Response
      */
     public function listPages(Request $request, Response $response, ?string $lang = null, ?string $name = null): Response
     {
@@ -94,8 +92,6 @@ class MainController extends AbstractPluginController
      *
      * @param Request  $request  PSR Request
      * @param Response $response PSR Response
-     *
-     * @return Response
      */
     public function changePage(Request $request, Response $response): Response
     {
@@ -119,8 +115,6 @@ class MainController extends AbstractPluginController
      *
      * @param Request  $request  PSR Request
      * @param Response $response PSR Response
-     *
-     * @return Response
      */
     public function editPage(Request $request, Response $response): Response
     {
@@ -178,8 +172,6 @@ class MainController extends AbstractPluginController
      * @param Request     $request  PSR Request
      * @param Response    $response PSR Response
      * @param string|null $name     One of 'legal-information', 'terms-of-service' or 'privacy-policy'
-     *
-     * @return Response
      */
     public function viewPage(Request $request, Response $response, ?string $name = null): Response
     {
@@ -243,8 +235,6 @@ class MainController extends AbstractPluginController
      *
      * @param Request  $request  PSR Request
      * @param Response $response PSR Response
-     *
-     * @return Response
      */
     public function settings(Request $request, Response $response): Response
     {
@@ -282,8 +272,6 @@ class MainController extends AbstractPluginController
      *
      * @param Request  $request  PSR Request
      * @param Response $response PSR Response
-     *
-     * @return Response
      */
     public function storeSettings(Request $request, Response $response): Response
     {
