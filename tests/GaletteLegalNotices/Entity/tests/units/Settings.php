@@ -23,7 +23,7 @@ declare(strict_types=1);
 
 namespace GaletteLegalNotices\Entity\tests\units;
 
-use Galette\GaletteTestCase;
+use Galette\Tests\GaletteTestCase;
 
 /**
  * Settings tests
