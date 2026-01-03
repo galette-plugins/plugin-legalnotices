@@ -295,7 +295,7 @@ class Settings
 
             $stmt = $this->zdb->sql->prepareStatementForSqlObject($update);
 
-            foreach (self::$defaults as $k => $v) {
+            foreach (array_keys(self::$defaults) as $k) {
                 Analog::log('Storing Legal Notices ' . $k, Analog::DEBUG);
 
                 $value = $this->settings[$k];

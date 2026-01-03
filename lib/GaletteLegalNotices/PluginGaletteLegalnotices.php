@@ -49,7 +49,6 @@ class PluginGaletteLegalnotices extends GalettePlugin
         global $login;
         /** @var Db $zdb */
         global $zdb;
-        $settings = new Settings($zdb);
         $menus = [];
         $items = [];
 
