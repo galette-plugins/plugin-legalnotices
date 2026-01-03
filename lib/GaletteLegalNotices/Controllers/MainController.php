@@ -163,10 +163,8 @@ class MainController extends AbstractPluginController
      *
      * @param string|null $name One of 'legal-information', 'terms-of-service' or 'privacy-policy'
      */
-    public function viewPage(Request $request, Response $response, ?string $name = null): Response
+    public function viewPage(Request $request, Response $response, I18n $i18n, ?string $name = null): Response
     {
-        /** @var I18n $i18n */
-        global $i18n;
         $lang = $i18n->getID();
         $login = $this->login;
         $pages = new Pages($this->preferences, $this->routeparser);
