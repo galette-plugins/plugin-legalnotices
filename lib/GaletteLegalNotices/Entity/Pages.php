@@ -93,7 +93,7 @@ class Pages
     /**
      * Get patterns for pages
      *
-     * @param boolean $legacy Whether to load legacy patterns
+     * @param bool $legacy Whether to load legacy patterns
      *
      * @return array<string, array<string, list<string>|string>>
      */
@@ -115,8 +115,6 @@ class Pages
 
     /**
      * Set pages replacements
-     *
-     * @return self
      */
     public function setPagesPatterns(): self
     {
@@ -155,9 +153,9 @@ class Pages
     /**
      * Initialize pages at install time
      *
-     * @param boolean $check_first Check first if it seems initialized
+     * @param bool $check_first Check first if it seems initialized
      *
-     * @return boolean false if no need to initialize, true if data has been initialized, Exception if error
+     * @return bool false if no need to initialize, true if data has been initialized, Exception if error
      * @throws Throwable
      */
     public function installInit(bool $check_first = true): bool
@@ -210,8 +208,6 @@ class Pages
 
     /**
      * Checks for missing pages in the database
-     *
-     * @return boolean
      */
     private function checkUpdate(): bool
     {
@@ -266,8 +262,6 @@ class Pages
 
     /**
      * Checks for translated pages in the database
-     *
-     * @return bool
      */
     private function checkTranslated(): bool
     {
@@ -400,8 +394,6 @@ class Pages
      * @param string $lang Page language to locate
      * @param string $body Page body to store
      * @param string $url  Page external URL to store
-     *
-     * @return bool
      */
     public function storePageContent(string $name, string $lang, string $body, string $url): bool
     {
@@ -469,8 +461,6 @@ class Pages
 
     /**
      * Get the page body, with all replacements done
-     *
-     * @return string
      */
     public function getBody(): string
     {
@@ -481,8 +471,6 @@ class Pages
      * Insert values in database
      *
      * @param array<int, mixed> $values Values to insert
-     *
-     * @return void
      */
     private function insert(array $values): void
     {
@@ -611,8 +599,6 @@ class Pages
      * Set translated pages
      *
      * @param array<int, string> $pages array of translated pages
-     *
-     * @return void
      */
     public function setTranslated(array $pages): void
     {
@@ -623,8 +609,6 @@ class Pages
      * Check if the specified page is translated
      *
      * @param int $id page identifier
-     *
-     * @return boolean
      */
     public function isTranslated(int $id): bool
     {
