@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-12-09 12:59+0100\n"
+"POT-Creation-Date: 2026-03-06 15:14+0100\n"
 "PO-Revision-Date: 2025-03-20 10:25+0100\n"
 "Last-Translator: Guillaume AGNIERAY <dev@agnieray.net>\n"
 "Language-Team: \n"
@@ -19,30 +19,30 @@ msgstr ""
 "n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:77
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:58
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:73
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:57
 msgid "Pages content"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:147
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:133
 #, php-format
 msgid "The \"%s\" page has not been modified!"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:156
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:142
 #, php-format
 msgid "The \"%s\" page has been successfully modified."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:265
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:240
 msgid "Legal Notices settings"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:306
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:276
 msgid "Legal Notices settings have been saved."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:309
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:279
 msgid ""
 "An SQL error has occurred while storing Legal Notices settings. Please try "
 "again, and contact the administrator if the problem persists."
@@ -56,30 +56,30 @@ msgstr ""
 msgid "Your organisation email address link"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:547
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:100
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:535
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:99
 #: ../tempcache/scripts.html.twig:88
 msgid "Legal Information"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:555
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:110
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:543
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:109
 #: ../tempcache/scripts.html.twig:76
 msgid "Terms of Service"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:563
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:120
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:551
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:119
 #: ../tempcache/scripts.html.twig:64
 msgid "Privacy Policy"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:603
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:591
 msgid "Specific to the Legal Notices plugin"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:76
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:133
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:75
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:132
 msgid "Legal Notices"
 msgstr ""
 

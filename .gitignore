@@ -6,4 +6,5 @@ webroot/js/klaro-no-css.js
 webroot/klaro.min.css
 dist/
 tempcache/
+lang/*.po~
 tests/coverage/
