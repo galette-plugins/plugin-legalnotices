@@ -24,5 +24,6 @@ $this->register(
         'legalnotices_page_change' => 'staff',
         'legalnotices_page_edit' => 'staff'
     ],
-    priority: 9999                           //Priority
+    priority: 9999,                          //Priority
+    dbver: 1.00                              //DB version
 );
