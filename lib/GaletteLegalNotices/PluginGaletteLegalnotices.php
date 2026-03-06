@@ -23,10 +23,14 @@ declare(strict_types=1);
 
 namespace GaletteLegalNotices;
 
+use DI\Attribute\Inject;
 use Galette\Core\Db;
 use Galette\Core\Login;
+use Galette\Core\Plugins\DashboardProviderInterface;
+use Galette\Core\Plugins\MenuProviderInterface;
 use Galette\Entity\Adherent;
 use Galette\Core\GalettePlugin;
+use GaletteLegalNotices\Entity\Pages;
 use GaletteLegalNotices\Entity\Settings;
 
 /**
@@ -36,19 +40,20 @@ use GaletteLegalNotices\Entity\Settings;
  * @author Guillaume AGNIERAY <dev@agnieray.net>
  */
 
-class PluginGaletteLegalnotices extends GalettePlugin
+class PluginGaletteLegalnotices extends GalettePlugin implements MenuProviderInterface
 {
+    #[Inject]
+    private readonly Db $zdb;
+
     /**
-     * Extra menus entries
+     * Get plugins menus
      *
      * @return array<string, string|array<string,mixed>>
      */
-    public static function getMenusContents(): array
+    public function getMenus(): array
     {
         /** @var Login $login */
         global $login;
-        /** @var Db $zdb */
-        global $zdb;
         $menus = [];
         $items = [];
 
@@ -82,15 +87,13 @@ class PluginGaletteLegalnotices extends GalettePlugin
     }
 
     /**
-     * Extra public menus entries
+     * Get plugins public menus
      *
      * @return array<int, string|array<string,mixed>>
      */
-    public static function getPublicMenusItemsList(): array
+    public function getPublicMenus(): array
     {
-        /** @var Db $zdb */
-        global $zdb;
-        $settings = new Settings($zdb);
+        $settings = new Settings($this->zdb);
         $items = [];
         $children = [];
 
@@ -142,60 +145,6 @@ class PluginGaletteLegalnotices extends GalettePlugin
     }
 
     /**
-     * Get dashboards contents
-     *
-     * @return array<int, string|array<string,mixed>>
-     */
-    public static function getDashboardsContents(): array
-    {
-        return [];
-    }
-
-    /**
-     * Get current logged-in user dashboards contents
-     *
-     * @return array<int, string|array<string,mixed>>
-     */
-    public static function getMyDashboardsContents(): array
-    {
-        return [];
-    }
-
-    /**
-     * Get actions contents
-     *
-     * @param Adherent $member Member instance
-     *
-     * @return array<int, string|array<string,mixed>>
-     */
-    public static function getListActionsContents(Adherent $member): array
-    {
-        return [];
-    }
-
-    /**
-     * Get detailed actions contents
-     *
-     * @param Adherent $member Member instance
-     *
-     * @return array<int, string|array<string,mixed>>
-     */
-    public static function getDetailedActionsContents(Adherent $member): array
-    {
-        return static::getListActionsContents($member);
-    }
-
-    /**
-     * Get batch actions contents
-     *
-     * @return array<int, string|array<string,mixed>>
-     */
-    public static function getBatchActionsContents(): array
-    {
-        return [];
-    }
-
-    /**
      * Get plugin settings
      *
      * @return array<string>
@@ -206,5 +155,23 @@ class PluginGaletteLegalnotices extends GalettePlugin
         global $zdb;
         $settings = new Settings($zdb);
         return $settings->getSettings();
+    }
+
+    /**
+     * Is the plugin fully installed (including database, extra configuration, etc.)?
+     */
+    public function isInstalled(): bool
+    {
+        try {
+            $this->zdb->execute($this->zdb->select(LEGALNOTICES_PREFIX . Pages::TABLE)->limit(1));
+            $this->zdb->execute($this->zdb->select(LEGALNOTICES_PREFIX . Settings::TABLE)->limit(1));
+            return true;
+        }
+        catch (\Throwable $e) {
+            if (!$this->zdb->isMissingTableException($e)) {
+                throw $e;
+            }
+        }
+        return false;
     }
 }
