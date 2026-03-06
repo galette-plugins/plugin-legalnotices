@@ -21,20 +21,21 @@
 
 declare(strict_types=1);
 
+/** @var \Galette\Core\Plugins $this */
 $this->register(
-    'Galette Legal Notices',
-    'Manage legal notices in Galette',
-    'Guillaume AGNIERAY',
-    '1.0.0',
-    '1.2.0',
-    'legalnotices',
-    '2025-10-17',
-    [
+    name: 'Galette Legal Notices',           //Name
+    desc: 'Manage legal notices in Galette', //Short description
+    author: 'Guillaume AGNIERAY',            //Author
+    version: '1.0.0',                        //Version
+    compver: '1.2.0',                        //Galette compatible version
+    route: 'legalnotices',                   //Routing name and translation domain
+    date: '2025-10-17',                      //Release date
+    acls: [                                  //Permissions needed
         'legalnotices_settings' => 'admin',
         'legalnotices_store_settings' => 'admin',
         'legalnotices_pages' => 'staff',
         'legalnotices_page_change' => 'staff',
         'legalnotices_page_edit' => 'staff'
     ],
-    9999
+    priority: 9999                           //Priority
 );
