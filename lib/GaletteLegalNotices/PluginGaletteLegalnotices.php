@@ -26,9 +26,7 @@ namespace GaletteLegalNotices;
 use DI\Attribute\Inject;
 use Galette\Core\Db;
 use Galette\Core\Login;
-use Galette\Core\Plugins\DashboardProviderInterface;
 use Galette\Core\Plugins\MenuProviderInterface;
-use Galette\Entity\Adherent;
 use Galette\Core\GalettePlugin;
 use GaletteLegalNotices\Entity\Pages;
 use GaletteLegalNotices\Entity\Settings;
@@ -43,7 +41,7 @@ use GaletteLegalNotices\Entity\Settings;
 class PluginGaletteLegalnotices extends GalettePlugin implements MenuProviderInterface
 {
     #[Inject]
-    private readonly Db $zdb;
+    private readonly Db $zdb; //@phpstan-ignore-line injected from DI
 
     /**
      * Get plugins menus
@@ -166,8 +164,7 @@ class PluginGaletteLegalnotices extends GalettePlugin implements MenuProviderInt
             $this->zdb->execute($this->zdb->select(LEGALNOTICES_PREFIX . Pages::TABLE)->limit(1));
             $this->zdb->execute($this->zdb->select(LEGALNOTICES_PREFIX . Settings::TABLE)->limit(1));
             return true;
-        }
-        catch (\Throwable $e) {
+        } catch (\Throwable $e) {
             if (!$this->zdb->isMissingTableException($e)) {
                 throw $e;
             }
