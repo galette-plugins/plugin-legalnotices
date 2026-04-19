@@ -160,15 +160,8 @@ class PluginGaletteLegalnotices extends GalettePlugin implements MenuProviderInt
      */
     public function isInstalled(): bool
     {
-        try {
-            $this->zdb->execute($this->zdb->select(LEGALNOTICES_PREFIX . Pages::TABLE)->limit(1));
-            $this->zdb->execute($this->zdb->select(LEGALNOTICES_PREFIX . Settings::TABLE)->limit(1));
-            return true;
-        } catch (\Throwable $e) {
-            if (!$this->zdb->isMissingTableException($e)) {
-                throw $e;
-            }
-        }
-        return false;
+        return
+            $this->zdb->tableExists(LEGALNOTICES_PREFIX . Pages::TABLE)
+            && $this->zdb->tableExists(LEGALNOTICES_PREFIX . Settings::TABLE);
     }
 }
