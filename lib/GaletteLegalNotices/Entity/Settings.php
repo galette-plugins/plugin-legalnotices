@@ -56,8 +56,8 @@ class Settings
     /** @var array<string> */
     private array $errors = [];
 
-    public const TABLE = 'settings';
-    public const PK = 'name';
+    public const string TABLE = 'settings';
+    public const string PK = 'name';
 
     /** @var array<string> */
     private static array $fields = [
