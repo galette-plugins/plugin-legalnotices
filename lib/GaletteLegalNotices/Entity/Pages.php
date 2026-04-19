@@ -48,9 +48,9 @@ class Pages
 
     /** @var ArrayObject<string, int|string> */
     private ArrayObject $current_page;
-    public const TABLE = 'pages';
-    public const PK = 'id';
-    public const DEFAULT_NAME = 'legal-information';
+    public const string TABLE = 'pages';
+    public const string PK = 'id';
+    public const string DEFAULT_NAME = 'legal-information';
 
     /** @var array<int, mixed> */
     private array $defaults;
