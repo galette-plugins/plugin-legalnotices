@@ -87,8 +87,12 @@ jobs:
 
       - name: Headers checks
         run: |
-          cd galette-core/galette/plugins/plugin-legalnotices
-          ../../vendor/bin/docheader --docheader=.docheader check lib ./*.php
+          cd galette-core
+          ./bin/console galette:headers:check \
+            --project-name="Galette Legal Notices plugin" \
+            --project-url="https://galette-community.github.io/plugin-legalnotices" \
+            --start-year="2025" \
+            --directory="galette/plugins/plugin-legalnotices"
 
   unit-tests:
     runs-on: ubuntu-latest
