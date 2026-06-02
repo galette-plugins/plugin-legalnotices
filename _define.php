@@ -14,7 +14,7 @@ $this->register(
     desc: 'Manage legal notices in Galette', //Short description
     author: 'Guillaume AGNIERAY',            //Author
     version: '1.0.0',                        //Version
-    compver: '1.2.0',                        //Galette compatible version
+    compver: '1.3.0',                        //Galette compatible version
     route: 'legalnotices',                   //Routing name and translation domain
     date: '2025-10-17',                      //Release date
     acls: [                                  //Permissions needed
