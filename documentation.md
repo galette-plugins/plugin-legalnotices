@@ -13,14 +13,15 @@ This plugin provides:
 First of all, download the plugin:
 
 [![Get latest Legal Notices plugin!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619
-)](https://github.com/galette-community/plugin-legalnotices/releases/tag/1.0.0)
+)](https://github.com/galette-community/plugin-legalnotices/releases/tag/1.0.0) [![Get Legal Notices plugin nightly build!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619
+)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
 
 Extract the downloaded archive into Galette `plugins` directory. For example, on linux (replacing *{url}* and *{version}* with correct values):
 
 ```
 $ cd /var/www/html/galette/plugins
 $ wget {url}
-$ tar xjvf galette-plugin-legalnotices-{version}.tar.bz2
+$ tar xjvf galette-plugin-legal-notices-{version}.tar.bz2
 ```
 
 ## Database initialisation
