@@ -40,7 +40,6 @@
                             </div>
                         </div>
                     </div>
-                    {% include "components/forms/csrf.html.twig" %}
                 </div>
             </form>
         </div>
@@ -76,7 +75,6 @@
                 </button>
                 <input type="hidden" name="cur_name" value="{{ cur_name }}"/>
                 <input type="hidden" name="cur_lang" value="{{ cur_lang }}"/>
-                {% include "components/forms/csrf.html.twig" %}
             </div>
         </form>
         {% include 'modals/replacements_legend.html.twig' with {'legends': pages.getLegend(), 'cur_ref': cur_name} %}
