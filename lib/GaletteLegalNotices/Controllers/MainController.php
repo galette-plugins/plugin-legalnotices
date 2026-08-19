@@ -15,6 +15,7 @@ use Galette\Core\I18n;
 use Galette\Controllers\AbstractPluginController;
 use GaletteLegalNotices\Entity\Pages;
 use GaletteLegalNotices\Entity\Settings;
+use Slim\Exception\HttpNotFoundException;
 use Slim\Psr7\Request;
 use Slim\Psr7\Response;
 
@@ -183,10 +184,7 @@ class MainController extends AbstractPluginController
 
         // Prevent page access if not enabled in settings
         if (!$plugin_settings->isPageEnabled($page['name'])) {
-            // return $response->withStatus(404); // Doesn't work :(
-            return $response
-                ->withStatus(302)
-                ->withHeader('Location', '/page-not-found');
+            throw new HttpNotFoundException($request);
         }
 
         // Redirect to external url if one is set
