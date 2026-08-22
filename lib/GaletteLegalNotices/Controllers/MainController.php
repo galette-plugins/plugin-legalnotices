@@ -1,7 +1,7 @@
 <?php
 
 /**
- * This file is part of Galette Legal Notices plugin (https://galette-community.github.io/plugin-legalnotices).
+ * This file is part of Galette Legal Notices plugin (https://galette-plugins.github.io/plugin-legalnotices).
  * SPDX-FileCopyrightText: Copyright © 2025-2026 The Galette Team
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
@@ -67,7 +67,7 @@ class MainController extends AbstractPluginController
                 'cur_name'          => $name,
                 'page'              => $page,
                 'html_editor'       => true,
-                'documentation'     => 'https://galette-community.github.io/plugin-legalnotices/documentation.html#pages-content'
+                'documentation'     => 'https://galette-plugins.github.io/plugin-legalnotices/documentation.html#pages-content'
             ]
         );
         return $response;
@@ -225,7 +225,7 @@ class MainController extends AbstractPluginController
             'page_title' => _T("Legal Notices settings", "legalnotices"),
             'settings' => $settings,
             'langlist' => $this->i18n->getList(),
-            'documentation' => 'https://galette-community.github.io/plugin-legalnotices/documentation.html#settings'
+            'documentation' => 'https://galette-plugins.github.io/plugin-legalnotices/documentation.html#settings'
         ];
 
         // Display page
