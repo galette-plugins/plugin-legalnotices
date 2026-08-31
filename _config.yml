@@ -1,3 +1,10 @@
-theme: jekyll-theme-cayman
+remote_theme: galette/theme-ghpages
 title: Galette Legal Notices
 description: Plugin to manage legal notices
+maintainer: community
+plugin:
+  archive: galette-plugin-legalnotices
+  min_galette: "1.2.0"
+defaults:
+  - scope: {path: ""}
+    values: {layout: default, lang: en}
