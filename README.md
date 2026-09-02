@@ -28,7 +28,7 @@ Ce plugin utilise [Klaro!](https://github.com/klaro-org/klaro-js) comme Platefor
 * [bogues et fonctionnalités](https://github.com/galette-plugins/plugin-legalnotices/issues)
 * [documentation](https://galette-plugins.github.io/plugin-legalnotices/documentation.html)
 
-Pour utiliser le plugin Legal Notices pour Galette, vous aurez besoin d'une version adéquate de Galette, ainsi que du plugin lui même :
+Pour utiliser le plugin Legal Notices pour Galette, vous aurez besoin d'une version adéquate de Galette, ainsi que du plugin lui-même :
 
-* télécharger la dernière version stable depuis la [page du  plugin Legal Notices pour Galette](https://galette-plugins.github.io/plugin-legalnotices/)
+* télécharger la dernière version stable depuis la [page du plugin Legal Notices pour Galette](https://galette-plugins.github.io/plugin-legalnotices/)
 * utiliser [le code source du plugin Legal Notices pour Galette depuis le dépôt](https://github.com/galette-plugins/plugin-legalnotices/) (assurez-vous d'installer les bibliothèques tierces), cette solution requiert quelques compétences techniques
