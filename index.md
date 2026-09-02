@@ -98,7 +98,9 @@ Thus, the CMP is only useful when you add additional external services for which
 
 ### How to add an external service ?
 
-{% include alert.html type="note" content="This plugin uses <a href="https://github.com/klaro-org/klaro-js" target="_blank">Klaro!</a> as its Consent Management Platform (CMP). The following code examples describe how to add a simple additional service. Please, read <a href="https://klaro.org/docs/" target="_blank">Klaro! documentation</a> for further details and a better understanding." %}
+{% capture note_content %}This plugin uses <a href="https://github.com/klaro-org/klaro-js" target="_blank">Klaro!</a> as its Consent Management Platform (CMP). The following code examples describe how to add a simple additional service. Please, read <a href="https://klaro.org/docs/" target="_blank">Klaro! documentation</a> for further details and a better understanding.{% endcapture %}
+
+{% include alert.html type="note" content=note_content %}
 
 1. First, you have to create a custom template file named `local_klaro_config.html.twig` in the `templates/default` folder of the plugin.
 
