@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-08 12:10+0200\n"
+"POT-Creation-Date: 2026-09-14 20:08+0200\n"
 "PO-Revision-Date: 2025-03-20 10:26+0100\n"
 "Last-Translator: Guillaume AGNIERAY <dev@agnieray.net>\n"
 "Language-Team: \n"
@@ -18,30 +18,37 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:61
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:66
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:47
 msgid "Pages content"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:121
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:123
 #, php-format
-msgid "The \"%s\" page has not been modified!"
+msgid "Invalid external URL. The \"%s\" page has not been modified."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:130
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:139
 #, php-format
 msgid "The \"%s\" page has been successfully modified."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:225
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:146
+#, php-format
+msgid ""
+"An SQL error has occurred while storing the \"%s\" page. Please try again, "
+"and contact the administrator if the problem persists."
+msgstr ""
+
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:259
 msgid "Legal Notices settings"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:261
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:295
 msgid "Legal Notices settings have been saved."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:264
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:298
 msgid ""
 "An SQL error has occurred while storing Legal Notices settings. Please try "
 "again, and contact the administrator if the problem persists."
@@ -114,15 +121,19 @@ msgstr ""
 msgid "Or"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:211
+#: ../tempcache/legalnotices_pages.html.twig:214
 msgid "External URL"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:211
+#: ../tempcache/legalnotices_pages.html.twig:214
 msgid ""
 "Enter the URL that the user will be redirected to instead of displaying the "
 "content defined in the previous field. Setting this option disables editing "
 "of the page body."
+msgstr ""
+
+#: ../tempcache/legalnotices_pages.html.twig:216
+msgid "Use a valid external URL"
 msgstr ""
 
 #: ../tempcache/legalnotices_settings.html.twig:70

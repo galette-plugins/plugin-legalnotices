@@ -67,13 +67,15 @@
                 <div class="ui horizontal divider">
                     {{ _T("Or", "legalnotices") }}
                 </div>
+                {% set invalid_url = page.invalid_url|default(false) %}
                 {% include "components/forms/text.html.twig" with {
                     id: 'external_url',
                     value: page.url,
                     label: _T("External URL", "legalnotices"),
                     type: 'text',
                     tip: _T("Enter the URL that the user will be redirected to instead of displaying the content defined in the previous field. Setting this option disables editing of the page body.", "legalnotices"),
-                    component_class: 'field nolegend'
+                    component_class: 'field nolegend' ~ (invalid_url ? ' error' : ''),
+                    error_message: invalid_url ? _T("Use a valid external URL", "legalnotices") : null
                 } %}
             </div>
 
@@ -83,6 +85,7 @@
                 </button>
                 <input type="hidden" name="cur_name" value="{{ cur_name }}"/>
                 <input type="hidden" name="cur_lang" value="{{ cur_lang }}"/>
+                <input type="hidden" name="cur_label" value="{{ page.label }}"/>
             </div>
         </form>
         {% include 'modals/replacements_legend.html.twig' with {'legends': pages.getLegend(), 'cur_ref': cur_name} %}
