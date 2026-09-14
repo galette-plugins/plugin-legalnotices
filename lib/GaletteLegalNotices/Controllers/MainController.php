@@ -51,7 +51,12 @@ class MainController extends AbstractPluginController
 
         $pages = new Pages($this->preferences, $this->routeparser);
 
-        $page = $pages->getPages($name, $lang);
+        if ($this->session->page_settings) {
+            $page = new \ArrayObject($this->session->page_settings);
+            $this->session->page_settings = null;
+        } else {
+            $page = $pages->getPages($name, $lang);
+        }
 
         // Display page
         $this->view->render(
@@ -100,36 +105,65 @@ class MainController extends AbstractPluginController
     {
         $post = $request->getParsedBody();
         $pages = new Pages($this->preferences, $this->routeparser);
+        $invalid_url = false;
+        $errors_detected = [];
 
-        $cur_lang = $post['cur_lang'];
         $cur_name = $post['cur_name'];
+        $cur_lang = $post['cur_lang'];
+        $body = $post['page_body'];
+        $url = $post['external_url'];
 
         $page = $pages->getPages($cur_name, $cur_lang);
-        $store = $pages->storePageContent(
-            $cur_name,
-            $cur_lang,
-            $post['page_body'],
-            $post['external_url']
-        );
 
-        if (!$store) {
-            $this->flash->addMessage(
-                'error_detected',
-                preg_replace(
-                    '(%s)',
-                    $page['label'],
-                    _T('The "%s" page has not been modified!', "legalnotices")
-                )
+        if ($url != '' && !isValidWebUrl($url)) {
+            $invalid_url = true;
+            $errors_detected[] = preg_replace(
+                '(%s)',
+                $page['label'],
+                _T('Invalid external URL. The "%s" page has not been modified.', "legalnotices")
             );
         } else {
-            $this->flash->addMessage(
-                'success_detected',
-                preg_replace(
+            $stored = $pages->storePageContent(
+                $cur_name,
+                $cur_lang,
+                $body,
+                $url
+            );
+
+            if ($stored) {
+                $this->flash->addMessage(
+                    'success_detected',
+                    preg_replace(
+                        '(%s)',
+                        $page['label'],
+                        _T('The "%s" page has been successfully modified.', "legalnotices")
+                    )
+                );
+            } else {
+                $errors_detected[] = preg_replace(
                     '(%s)',
                     $page['label'],
-                    _T('The "%s" page has been successfully modified.', "legalnotices")
-                )
-            );
+                    _T('An SQL error has occurred while storing the "%s" page. Please try again, and contact the administrator if the problem persists.', "legalnotices")
+                );
+            }
+        }
+
+        if (!empty($errors_detected)) {
+            $this->session->page_settings = [
+                'name' => $cur_name,
+                'lang' => $cur_lang,
+                'body' => $body,
+                'url' => $url,
+                'label' => $post['cur_label'],
+                'invalid_url' => $invalid_url,
+            ];
+
+            foreach ($errors_detected as $error) {
+                $this->flash->addMessage(
+                    'error_detected',
+                    $error
+                );
+            }
         }
 
         return $response
@@ -245,7 +279,7 @@ class MainController extends AbstractPluginController
         $post = $request->getParsedBody();
         $plugin_settings = new Settings($this->zdb);
         $settings_fields = $plugin_settings->getFieldsNames();
-        $error_detected = [];
+        $errors_detected = [];
 
         if ($this->login->isAdmin()) {
             $plugin_settings->check($post);
@@ -261,13 +295,13 @@ class MainController extends AbstractPluginController
                     _T("Legal Notices settings have been saved.", "legalnotices")
                 );
             } else {
-                $error_detected[] = _T("An SQL error has occurred while storing Legal Notices settings. Please try again, and contact the administrator if the problem persists.", "legalnotices");
+                $errors_detected[] = _T("An SQL error has occurred while storing Legal Notices settings. Please try again, and contact the administrator if the problem persists.", "legalnotices");
             }
         }
 
-        if (count($error_detected) > 0) {
+        if (!empty($errors_detected)) {
             $this->session->entered_settings = $post;
-            foreach ($error_detected as $error) {
+            foreach ($errors_detected as $error) {
                 $this->flash->addMessage(
                     'error_detected',
                     $error
