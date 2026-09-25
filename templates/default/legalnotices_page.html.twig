@@ -8,7 +8,7 @@
 
 {% block content %}
     {% if login.isLogged() and login.isAdmin() or login.isStaff() %}
-        <div class="ui horizontally fitted basic segment">
+        <div class="ui fitted basic segment">
             <a href="{{ url_for('legalnotices_pages', {'lang': i18n.getID(), 'name': name}) }}" class="ui labeled icon button">
               <i class="edit blue icon" aria-hidden="true"></i>
               {{ _T("Edit this page", "legalnotices") }}
