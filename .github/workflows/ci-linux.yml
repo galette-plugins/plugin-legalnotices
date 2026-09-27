@@ -182,6 +182,11 @@ jobs:
         with:
           path: galette-core/galette/plugins/plugin-legalnotices
 
+      - name: Compile translations
+        run: |
+          cd galette-core
+          bin/console galette:compile-locales plugin-legalnotices
+
       - name: Init for PostgreSQL
         env:
           POSTGRES_HOST: localhost
