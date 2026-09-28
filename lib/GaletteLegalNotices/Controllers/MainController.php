@@ -221,10 +221,10 @@ class MainController extends AbstractPluginController
             throw new HttpNotFoundException($request);
         }
 
-        // Redirect to external url if one is set
+        // Redirect to external url if one is set; not permanently, it can change
         if ($page['url'] != '') {
             return $response
-                ->withStatus(301)
+                ->withStatus(302)
                 ->withHeader('Location', $page['url']);
         }
 
