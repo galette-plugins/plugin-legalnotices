@@ -197,7 +197,7 @@ class MainController extends AbstractPluginController
 
         // Get fallback language if page is not translated
         $lang = $plugin_settings->getFallbackLanguage();
-        if (!$pages->isTranslated($page['id']) && $page['lang'] != $lang) {
+        if (!$pages->isTranslated((int)$page['id']) && $page['lang'] != $lang) {
             $translated = false;
             $page = $pages->getPages($name, $lang);
         }
