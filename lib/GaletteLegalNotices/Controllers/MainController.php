@@ -108,10 +108,15 @@ class MainController extends AbstractPluginController
         $invalid_url = false;
         $errors_detected = [];
 
-        $cur_name = $post['cur_name'];
-        $cur_lang = $post['cur_lang'];
-        $body = $post['page_body'];
-        $url = $post['external_url'];
+        $cur_name = (string)($post['cur_name'] ?? '');
+        $cur_lang = (string)($post['cur_lang'] ?? '');
+        $body = (string)($post['page_body'] ?? '');
+        $url = trim((string)($post['external_url'] ?? ''));
+
+        //only known pages, in known languages
+        if (!in_array($cur_name, Pages::NAMES, true) || !array_key_exists($cur_lang, $this->i18n->getArrayList())) {
+            throw new HttpNotFoundException($request);
+        }
 
         $page = $pages->getPages($cur_name, $cur_lang);
 
