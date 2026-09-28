@@ -76,7 +76,6 @@ class Pages
             ->setMain()
             ->setPagesPatterns();
 
-        $this->checkUpdate();
         $this->checkTranslated();
     }
 
@@ -199,8 +198,11 @@ class Pages
 
     /**
      * Checks for missing pages in the database
+     *
+     * Every language is loaded to translate labels: not to be done on each page
+     * display, a missing page is added when requested by getPages().
      */
-    private function checkUpdate(): bool
+    public function checkUpdate(): bool
     {
         $this->defaults = $this->getAllDefaults(); //load defaults
 

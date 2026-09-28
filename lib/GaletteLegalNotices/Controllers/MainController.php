@@ -50,6 +50,8 @@ class MainController extends AbstractPluginController
         }
 
         $pages = new Pages($this->preferences, $this->routeparser);
+        //all pages are listed
+        $pages->checkUpdate();
 
         if ($this->session->page_settings) {
             $page = new \ArrayObject($this->session->page_settings);
