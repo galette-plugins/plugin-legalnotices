@@ -8,19 +8,20 @@
 
 {% if settings.enable_cmp == '1' or settings.publicpage_links != '1' or (settings.publicpage_links == '1' and preferences.pref_bool_publicpages != '1') or ext_auth is defined %}
     <script type="text/javascript">
+        //not every page has a footer
         let footer_links = document.querySelector('.page-footer .horizontal.bulleted.link.list');
     {% if settings.publicpage_links != '1' or (settings.publicpage_links == '1' and preferences.pref_bool_publicpages != '1') or ext_auth is defined %}
         {% if settings.enable_privacy_policy == 1 %}
             let privacy_link = '<a class="item" href="{{ url_for('legalnotices_page', {'name': 'privacy-policy'}) }}"><i class="lock icon" aria-hidden="true"></i>{{ _T("Privacy Policy", "legalnotices") }}</a>';
-            footer_links.insertAdjacentHTML('afterbegin', privacy_link);
+            footer_links?.insertAdjacentHTML('afterbegin', privacy_link);
         {% endif %}
         {% if settings.enable_terms_of_service == 1 %}
             let terms_link = '<a class="item" href="{{ url_for('legalnotices_page', {'name': 'terms-of-service'}) }}"><i class="handshake outline icon" aria-hidden="true"></i>{{ _T("Terms of Service", "legalnotices") }}</a>';
-            footer_links.insertAdjacentHTML('afterbegin', terms_link);
+            footer_links?.insertAdjacentHTML('afterbegin', terms_link);
         {% endif %}
         {% if settings.enable_legal_information == 1 %}
             let information_link = '<a class="item" href="{{ url_for('legalnotices_page', {'name': 'legal-information'}) }}"><i class="balance scale left icon" aria-hidden="true"></i>{{ _T("Legal Information", "legalnotices") }}</a>';
-            footer_links.insertAdjacentHTML('afterbegin', information_link);
+            footer_links?.insertAdjacentHTML('afterbegin', information_link);
         {% endif %}
     {% endif %}
     {% if settings.enable_cmp == '1' %}
@@ -28,7 +29,7 @@
             if (typeof klaro !== 'undefined') {
                 return klaro.show();
             } else {
-                alert("{{ _T("The consent manager could not be loaded. It may have been blocked by an ad blocker.", "legalnotices")|raw }}");
+                alert("{{ _T("The consent manager could not be loaded. It may have been blocked by an ad blocker.", "legalnotices")|e('js') }}");
             }
         }
         var klaroConfig = {
@@ -68,7 +69,7 @@
                             description: '{{ _T("These services process personal information to optimize the service that this website offers.", "legalnotices") }}'
                         },
                         analytics: {
-                            title: "{{ _T("Analytics", "legalnotices")|raw }}",
+                            title: "{{ _T("Analytics", "legalnotices")|e('js') }}",
                             description: '{{ _T("These services process personal information to let us know how you use this website.", "legalnotices") }}'
                         },
                         marketing: {
@@ -84,7 +85,7 @@
                         service: '{{ _T("service", "legalnotices") }}',
                         services: '{{ _T("services", "legalnotices") }}'
                     },
-                    ok: "{{ _T("That's ok", "legalnotices")|raw }}",
+                    ok: "{{ _T("That's ok", "legalnotices")|e('js') }}",
                     save: '{{ _T("Save", "legalnotices") }}',
                     decline: '{{ _T("I decline", "legalnotices") }}',
                     close: '{{ _T("Close", "legalnotices") }}',
@@ -134,7 +135,7 @@
             ]
         };
         let cmp_link = '<a class="item" onclick="openConsentManager();" href="#"><i class="shield alternate icon" aria-hidden="true"></i>{{ _T("Consent Manager", "legalnotices") }}</a>';
-        footer_links.insertAdjacentHTML('beforeend', cmp_link);
+        footer_links?.insertAdjacentHTML('beforeend', cmp_link);
     {% endif %}
     </script>
 
