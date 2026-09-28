@@ -245,4 +245,23 @@ class MainController extends GaletteRoutingTestCase
         $select->where(['name' => 'privacy-policy', 'lang' => 'fr_FR']);
         $this->assertSame('<p>Nos données</p>', $this->zdb->execute($select)->current()->body);
     }
+
+    /**
+     * Displaying a page does not load every language
+     */
+    public function testViewPageLoadsOneLanguage(): void
+    {
+        global $galette_log_var;
+
+        $this->setSetting('enable_legal_information', '1');
+        (new Pages($this->preferences, $this->routeparser))->installInit();
+
+        $galette_log_var = null;
+        $test_response = $this->app->handle(
+            $this->createRequest('legalnotices_page', ['name' => 'legal-information'])
+        );
+        $this->assertSame(200, $test_response->getStatusCode());
+        $this->assertLessThanOrEqual(2, substr_count((string)$galette_log_var, 'Trying to set locale'));
+        $this->expectNoLogEntry();
+    }
 }
