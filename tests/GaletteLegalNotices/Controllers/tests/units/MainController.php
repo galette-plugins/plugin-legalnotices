@@ -178,4 +178,22 @@ class MainController extends GaletteRoutingTestCase
         $this->assertStringNotContainsString("x'; alert(5)", $body);
         $this->expectNoLogEntry();
     }
+
+    /**
+     * Pages set to an external URL redirect to it, not permanently
+     */
+    public function testExternalUrl(): void
+    {
+        $this->setSetting('enable_legal_information', '1');
+        $pages = new Pages($this->preferences, $this->routeparser);
+        $pages->getPages('legal-information', \Galette\Core\I18n::DEFAULT_LANG);
+        $pages->storePageContent('legal-information', \Galette\Core\I18n::DEFAULT_LANG, '', 'https://example.org/legal');
+
+        $test_response = $this->app->handle(
+            $this->createRequest('legalnotices_page', ['name' => 'legal-information'])
+        );
+        $this->assertSame(302, $test_response->getStatusCode());
+        $this->assertSame(['https://example.org/legal'], $test_response->getHeader('Location'));
+        $this->expectNoLogEntry();
+    }
 }
