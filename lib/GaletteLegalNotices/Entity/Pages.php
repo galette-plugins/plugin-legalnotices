@@ -14,6 +14,7 @@ use ArrayObject;
 use Galette\Core\I18n;
 use Galette\Core\Preferences;
 use Galette\Features\Replacements;
+use Galette\Util\Html;
 use Slim\Routing\RouteParser;
 use Throwable;
 use Analog\Analog;
@@ -108,7 +109,8 @@ class Pages
         $phone_link = '';
         $phone_number = $this->preferences->getPhoneNumber();
         if ($phone_number != '') {
-            $phone_link = '<a href="tel:' . preg_replace('/[^0-9+]/', '', $phone_number) . '">' . $phone_number . '</a>';
+            $phone_link = '<a href="tel:' . preg_replace('/[^0-9+]/', '', $phone_number) . '">'
+                . htmlspecialchars($phone_number) . '</a>';
         }
 
         $email_link = '';
@@ -117,13 +119,13 @@ class Pages
             // Obfuscate email address to prevent from being collected by spambots.
             $email_parts = explode('@', $email_address);
             $user_part = $email_parts[0];
-            $domain_part = str_replace('.', '<span class="p"> [dot] </span>', $email_parts[1]);
+            $domain_part = str_replace('.', '<span class="p"> [dot] </span>', htmlspecialchars($email_parts[1]));
             $regs = [
                 '/%user/',
                 '/%domain/'
             ];
             $replacements = [
-                $user_part,
+                htmlspecialchars($user_part),
                 $domain_part
             ];
             $link = '<span class="obfuscate"><span class="u">%user</span> [at] <span class="d">%domain</span></span>';
@@ -387,7 +389,7 @@ class Pages
         try {
             // Clean body value from content left by summernote to apply
             // focus on the editor when empty.
-            $body = $body == '<br>' || $body == '<p><br></p>' ? '' : $body;
+            $body = $body == '<br>' || $body == '<p><br></p>' ? '' : Html::clean($body);
 
             $values = [
                 'body' => $body,
@@ -451,7 +453,8 @@ class Pages
      */
     public function getBody(): string
     {
-        return $this->proceedReplacements($this->current_page['body']);
+        //pages stored before their content was cleaned; replacements are trusted
+        return $this->proceedReplacements(Html::clean($this->current_page['body']));
     }
 
     /**
