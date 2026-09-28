@@ -39,6 +39,8 @@ class Pages
     public const string TABLE = 'pages';
     public const string PK = 'id';
     public const string DEFAULT_NAME = 'legal-information';
+    /** @var array<string> */
+    public const array NAMES = ['legal-information', 'terms-of-service', 'privacy-policy'];
 
     /** @var array<int, mixed> */
     private array $defaults;
@@ -390,6 +392,9 @@ class Pages
             // Clean body value from content left by summernote to apply
             // focus on the editor when empty.
             $body = $body == '<br>' || $body == '<p><br></p>' ? '' : Html::clean($body);
+
+            //page may not have been added for this language yet
+            $this->getPages($name, $lang);
 
             $values = [
                 'body' => $body,

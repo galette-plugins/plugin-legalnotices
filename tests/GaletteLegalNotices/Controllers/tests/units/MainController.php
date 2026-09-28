@@ -196,4 +196,53 @@ class MainController extends GaletteRoutingTestCase
         $this->assertSame(['https://example.org/legal'], $test_response->getHeader('Location'));
         $this->expectNoLogEntry();
     }
+
+    /**
+     * Post a page content
+     *
+     * @param array<string, string> $data Posted data
+     */
+    private function postPage(array $data): \Psr\Http\Message\ResponseInterface
+    {
+        $request = $this->createRequest('legalnotices_page_edit', [], 'POST')->withParsedBody($data);
+        return $this->app->handle($request);
+    }
+
+    /**
+     * Only known pages, in known languages, can be edited; missing ones are added
+     */
+    public function testEditPage(): void
+    {
+        $this->logSuperAdmin();
+        $delete = $this->zdb->delete(LEGALNOTICES_PREFIX . Pages::TABLE);
+        $this->zdb->execute($delete);
+
+        foreach (
+            [
+                ['cur_name' => 'unknown', 'cur_lang' => 'fr_FR'],
+                ['cur_name' => 'legal-information', 'cur_lang' => 'xx_XX'],
+                ['page_body' => '<p>Hi</p>']
+            ] as $data
+        ) {
+            $this->assertSame(404, $this->postPage($data + ['page_body' => '<p>Hi</p>', 'external_url' => ''])->getStatusCode());
+            $this->expectNoLogEntry();
+        }
+        $select = $this->zdb->select(LEGALNOTICES_PREFIX . Pages::TABLE);
+        $select->where(['body' => '<p>Hi</p>']);
+        $this->assertSame(0, $this->zdb->execute($select)->count());
+
+        //page does not exist yet in database
+        $test_response = $this->postPage([
+            'cur_name' => 'privacy-policy',
+            'cur_lang' => 'fr_FR',
+            'cur_label' => 'Privacy Policy',
+            'page_body' => '<p>Nos données</p>',
+            'external_url' => ''
+        ]);
+        $this->assertSame(301, $test_response->getStatusCode());
+        $this->expectNoLogEntry();
+        $select = $this->zdb->select(LEGALNOTICES_PREFIX . Pages::TABLE);
+        $select->where(['name' => 'privacy-policy', 'lang' => 'fr_FR']);
+        $this->assertSame('<p>Nos données</p>', $this->zdb->execute($select)->current()->body);
+    }
 }
