@@ -264,4 +264,22 @@ class MainController extends GaletteRoutingTestCase
         $this->assertLessThanOrEqual(2, substr_count((string)$galette_log_var, 'Trying to set locale'));
         $this->expectNoLogEntry();
     }
+
+    /**
+     * Consent manager texts are escaped for scripts
+     */
+    public function testConsentManagerScript(): void
+    {
+        $this->setSetting('enable_cmp', '1');
+        $this->setSetting('enable_legal_information', '1');
+
+        $test_response = $this->app->handle(
+            $this->createRequest('legalnotices_page', ['name' => 'legal-information'])
+        );
+        $this->assertSame(200, $test_response->getStatusCode());
+        $this->expectNoLogEntry();
+        $body = (string)$test_response->getBody();
+        $this->assertStringContainsString('ok: "That\\u0027s\\u0020ok"', $body);
+        $this->assertStringNotContainsString('footer_links.insertAdjacentHTML', $body);
+    }
 }
