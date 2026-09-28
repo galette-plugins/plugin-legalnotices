@@ -278,16 +278,10 @@ class MainController extends AbstractPluginController
     {
         $post = $request->getParsedBody();
         $plugin_settings = new Settings($this->zdb);
-        $settings_fields = $plugin_settings->getFieldsNames();
         $errors_detected = [];
 
         if ($this->login->isAdmin()) {
             $plugin_settings->check($post);
-            foreach ($settings_fields as $fieldname) {
-                if (isset($post[$fieldname])) {
-                    $plugin_settings->$fieldname = $post[$fieldname];
-                }
-            }
             $stored = $plugin_settings->store();
             if ($stored) {
                 $this->flash->addMessage(

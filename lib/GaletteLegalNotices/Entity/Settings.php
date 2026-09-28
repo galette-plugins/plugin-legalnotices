@@ -258,8 +258,24 @@ class Settings
             $insert_values[$fieldname] = $value;
         }
 
+        //values written in the scripts of every page: keep current ones when invalid
+        $valid = [
+            'cookie_expiration' => fn(mixed $value): bool => is_string($value) && ctype_digit($value) && (int)$value > 0,
+            'cookie_domain' => fn(mixed $value): bool => is_string($value)
+                && ($value === '' || preg_match('/^\.?[a-z0-9-]+(\.[a-z0-9-]+)*$/i', $value) === 1),
+            'fallback_language' => fn(mixed $value): bool => is_string($value)
+                && preg_match('/^[a-z]{2,3}(_[A-Z]{2})?$/', $value) === 1,
+        ];
+
         // update settings
         foreach ($insert_values as $field => $value) {
+            if (isset($valid[$field]) && !$valid[$field]($value)) {
+                Analog::log(
+                    'Invalid value for Legal Notices setting `' . $field . '`, current one is kept.',
+                    Analog::WARNING
+                );
+                continue;
+            }
             $this->$field = $value;
         }
 
