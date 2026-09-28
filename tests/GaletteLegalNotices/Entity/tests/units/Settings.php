@@ -53,12 +53,13 @@ class Settings extends GaletteTestCase
         }
 
         //try to set and get a non existent value
-        $settings->doesnotexist = 'that *does* not exist.';
+        $unknown = $this->magic('doesnotexist');
+        $settings->$unknown = 'that *does* not exist.';
         $this->expectLogEntry(
-            \Analog::WARNING,
+            \Analog\Analog::WARNING,
             'Trying to set a Legal Notices setting value which does not seem to exist (doesnotexist)'
         );
-        $false_result = $settings->doesnotexist;
+        $false_result = $settings->$unknown;
         $this->assertFalse($false_result);
 
         //change cookie lifetime
@@ -138,14 +139,26 @@ class Settings extends GaletteTestCase
     }
 
     /**
+     * Name of a property reached through magic methods
+     *
+     * @param string $name Property name
+     */
+    private function magic(string $name): string
+    {
+        return $name;
+    }
+
+    /**
      * Test __isset
      */
     public function testIsset(): void
     {
         $settings = new \GaletteLegalNotices\Entity\Settings($this->zdb);
 
-        $this->assertFalse(isset($settings->defaults));
-        $this->assertFalse(isset($settings->doesnotexist));
+        //not settings: a static property, and an unknown name
+        foreach (['defaults', 'doesnotexist'] as $name) {
+            $this->assertFalse(isset($settings->{$this->magic($name)}));
+        }
         $this->assertTrue(isset($settings->enable_legal_information));
         $this->assertTrue(isset($settings->cookie_domain));
     }
