@@ -116,4 +116,66 @@ class MainController extends GaletteRoutingTestCase
             $body
         );
     }
+
+    /**
+     * Get a plugin setting, as stored
+     *
+     * @param string $name Setting name
+     */
+    private function getSetting(string $name): string
+    {
+        $select = $this->zdb->select(LEGALNOTICES_PREFIX . Settings::TABLE);
+        $select->where(['name' => $name]);
+        return (string)$this->zdb->execute($select)->current()->value;
+    }
+
+    /**
+     * Settings written in the scripts of every page are checked, and escaped
+     */
+    public function testConsentManagerSettings(): void
+    {
+        $this->setSetting('cookie_domain', 'example.org');
+        $this->logSuperAdmin();
+
+        $request = $this->createRequest('legalnotices_store_settings', [], 'POST')->withParsedBody([
+            'enable_cmp' => '1',
+            'cookie_expiration' => '30; alert(4)//',
+            'cookie_domain' => "x'; alert(5)//",
+            'fallback_language' => '<b>'
+        ]);
+        $test_response = $this->app->handle($request);
+        $this->assertSame(301, $test_response->getStatusCode());
+        $this->expectFlashData(['success_detected' => [_T('Legal Notices settings have been saved.', 'legalnotices')]]);
+        $this->expectLogEntry(\Analog\Analog::WARNING, 'Invalid value for Legal Notices setting');
+        $this->expectNoLogEntry();
+
+        $this->assertSame('1', $this->getSetting('enable_cmp'));
+        $this->assertSame('90', $this->getSetting('cookie_expiration'));
+        $this->assertSame('example.org', $this->getSetting('cookie_domain'));
+        $this->assertSame(\Galette\Core\I18n::DEFAULT_LANG, $this->getSetting('fallback_language'));
+
+        $request = $this->createRequest('legalnotices_store_settings', [], 'POST')->withParsedBody([
+            'enable_cmp' => '1',
+            'cookie_expiration' => '30',
+            'cookie_domain' => '.example.org',
+            'fallback_language' => 'fr_FR'
+        ]);
+        $this->app->handle($request);
+        $this->expectFlashData(['success_detected' => [_T('Legal Notices settings have been saved.', 'legalnotices')]]);
+        $this->assertSame('30', $this->getSetting('cookie_expiration'));
+        $this->assertSame('.example.org', $this->getSetting('cookie_domain'));
+        $this->assertSame('fr_FR', $this->getSetting('fallback_language'));
+
+        //values stored before they were checked are escaped
+        $this->setSetting('cookie_expiration', '30; alert(4)//');
+        $this->setSetting('cookie_domain', "x'; alert(5)//");
+        $this->setSetting('enable_legal_information', '1');
+        $body = (string)$this->app->handle(
+            $this->createRequest('legalnotices_page', ['name' => 'legal-information'])
+        )->getBody();
+        $this->assertStringContainsString('klaroConfig', $body);
+        $this->assertStringNotContainsString('alert(4)', $body);
+        $this->assertStringNotContainsString("x'; alert(5)", $body);
+        $this->expectNoLogEntry();
+    }
 }

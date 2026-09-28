@@ -41,9 +41,9 @@
             acceptAll: {{ settings.hide_accept_all != 1 ? 'true' : 'false' }},
             hideDeclineAll: {{ settings.hide_decline_all != 1 ? 'false' : 'true' }},
         {% if settings.enable_localstorage != 1 %}
-            cookieExpiresAfterDays: {{ settings.cookie_expiration }},
+            cookieExpiresAfterDays: {{ settings.cookie_expiration|e('js') }},
             {% if settings.cookie_domain != '' %}
-                cookieDomain: '{{ settings.cookie_domain }}',
+                cookieDomain: '{{ settings.cookie_domain|e('js') }}',
             {% endif %}
         {% endif %}
             translations: {
