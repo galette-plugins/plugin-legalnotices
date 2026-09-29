@@ -5,3 +5,4 @@ tempcache/
 node_modules/
 templates/
 webroot/
+lang/

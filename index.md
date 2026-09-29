@@ -1,3 +1,9 @@
+---
+ref: home
+title: Galette Legal Notices
+description: Plugin to manage legal notices
+---
+
 This plugin provides:
 
 * up to **3 pages** to write down legal notices :
@@ -5,8 +11,6 @@ This plugin provides:
   - *Terms of Service* (in case you need to provide such terms)
   - *Privacy Policy* (for all notices regarding personal data processing and the use of cookies)
 * a **Consent Management Platform** (for advanced users)
-
-**Note**: this plugin requires **Galette 1.2.0 or later**.
 
 ## Installation
 
@@ -78,7 +82,7 @@ If both fields remain empty, the content of the *fallback language* chosen in th
 
 ### About the Consent Manager Platform
 
-**Note**: using the Consent Management Plateform (CMP) requires that you understand and know how to write JavaScript code.
+> **Note** — Using the Consent Management Plateform (CMP) requires that you understand and know how to write JavaScript code.
 
 Enabling the CMP in the settings does nothing useful on its own. By default, it will only display a message about the functional cookies stored by Galette.
 
@@ -94,7 +98,7 @@ Thus, the CMP is only useful when you add additional external services for which
 
 ### How to add an external service ?
 
-**Note**: this plugin uses [Klaro!](https://github.com/klaro-org/klaro-js) as its Consent Management Platform (CMP). The following code examples describe how to add a simple additional service. Please, read [Klaro! documentation](https://klaro.org/docs/) for further details and a better understanding.
+> **Note** — This plugin uses [Klaro!](https://github.com/klaro-org/klaro-js) as its Consent Management Platform (CMP). The following code examples describe how to add a simple additional service. Please, read [Klaro! documentation](https://klaro.org/docs) for further details and a better understanding.
 
 1. First, you have to create a custom template file named `local_klaro_config.html.twig` in the `templates/default` folder of the plugin.
 

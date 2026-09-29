@@ -1,3 +1,18 @@
-theme: jekyll-theme-cayman
+remote_theme: galette/theme-ghpages
 title: Galette Legal Notices
 description: Plugin to manage legal notices
+maintainer: community
+plugin:
+  archive: galette-plugin-legalnotices
+  min_galette: "1.2.0"
+defaults:
+  - scope: {path: ""}
+    values: {layout: default, lang: en}
+# Without this, README.md would be copied into the published site. It used to be
+# the index page; index.md is now, which is what gives the theme a `ref: home`
+# to build the menu and the language selector from.
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
