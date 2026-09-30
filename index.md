@@ -1,5 +1,4 @@
 ---
-ref: home
 title: Galette Legal Notices
 description: Plugin to manage legal notices
 ---
