@@ -8,15 +8,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: translations@galette.eu\n"
 "POT-Creation-Date: 2026-09-14 20:11+0200\n"
-"PO-Revision-Date: 2026-09-14 20:11+0200\n"
-"Last-Translator: Guillaume AGNIERAY <dev@agnieray.net>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-09-30 19:11+0000\n"
+"Last-Translator: Johan Cwiklinski <trasher@x-tnd.be>\n"
+"Language-Team: French <https://hosted.weblate.org/projects/galette/plugins-"
+"legalnotices/fr/>\n"
 "Language: fr_FR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:66
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:47
@@ -26,7 +27,7 @@ msgstr "Contenu des pages"
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:123
 #, php-format
 msgid "Invalid external URL. The \"%s\" page has not been modified."
-msgstr "URL externe invalide. La page \"%s\" n'a pas été modifiée !"
+msgstr "URL externe invalide. La page \"%s\" n'a pas été modifiée."
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:139
 #, php-format
@@ -290,9 +291,8 @@ msgid ""
 "Hi! Could we please enable some additional services for {purposes}? You can "
 "always change or withdraw your consent later."
 msgstr ""
-"Bonjour ! Pourrions-nous activer des services supplémentaires pour "
-"{purposes}? Vous pouvez toujours modifier ou retirer votre consentement plus "
-"tard."
+"Bonjour ! Pourrions-nous activer des services supplémentaires pour {purposes}"
+" ? Vous pouvez toujours modifier ou retirer votre consentement plus tard."
 
 #: ../tempcache/scripts.html.twig:178
 msgid "Let me choose"
@@ -427,11 +427,11 @@ msgstr "Ce service est toujours nécessaire"
 
 #: ../tempcache/scripts.html.twig:314
 msgid "purposes:"
-msgstr "fins:"
+msgstr "fins :"
 
 #: ../tempcache/scripts.html.twig:318
 msgid "purpose:"
-msgstr "objet:"
+msgstr "objet :"
 
 #: ../tempcache/scripts.html.twig:323
 msgid "Realized with Klaro!"
@@ -439,7 +439,7 @@ msgstr "Réalisé avec Klaro !"
 
 #: ../tempcache/scripts.html.twig:328
 msgid "Do you want to load external content supplied by {title}?"
-msgstr "Vous souhaitez charger un contenu externe fourni par {title}?"
+msgstr "Vous souhaitez charger un contenu externe fourni par {title} ?"
 
 #: ../tempcache/scripts.html.twig:332
 msgid "Yes"
