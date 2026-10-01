@@ -45,9 +45,9 @@ When the plugin is installed, a *Legal Notices* group is added to the Galette me
 
 Several settings allow to change the plugin's behavior:
 
-* **Enable de "Legal Information" page**
-* **Enable de "Terms of Service" page**
-* **Enable de "Privacy Policy" page**
+* **Enable the "Legal Information" page**
+* **Enable the "Terms of Service" page**
+* **Enable the "Privacy Policy" page**
 * **Move links in the "Public pages" menu** : links are added by default in the footer. Enable this option if you want to move them in the "Public pages" menu.
 * **Fallback language for untranslated pages**
 * **Enable the consent manager**
