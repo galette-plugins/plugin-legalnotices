@@ -3,7 +3,7 @@ title: Galette Legal Notices
 description: Plugin to manage legal notices
 ---
 
-This plugin provides:
+Ce plugin fournit :
 
 * up to **3 pages** to write down legal notices :
   - *Legal Information* (for all common legal notices)
@@ -14,15 +14,16 @@ This plugin provides:
 
 ## Installation
 
-First of all, download the plugin:
+Tout d'abord, téléchargez le plugin :
 
 [![Get latest Legal Notices
 plugin!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
 [![Get Legal Notices plugin nightly
 build!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
 
-Extract the downloaded archive into Galette `plugins` directory. For example, on
-linux (replacing *{url}* and *{version}* with correct values):
+Décompressez l'archive téléchargée dans le répertoire `plugins` de Galette. Par
+exemple, sous linux (en remplaçant *{url}* et *{version}* par les valeurs
+correspondantes) :
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -30,25 +31,25 @@ $ wget {url}
 $ tar xjvf galette-plugin-legal-notices-{version}.tar.bz2
 ```
 
-## Database initialisation
+## Initialisation de la base de données
 
-In order to work, this plugin requires several tables in the database. See the
-[Galette plugins management
-interface](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
+Pour fonctionner, ce plugin requiert des tables dans la base de données.
+Référez-vous [à l'interface de gestion des plugins de
+Galette](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
 
 And that’s it; the *Legal Notices* plugin is installed. :)
 
-## Plugin usage
+## Utilisation
 
 When the plugin is installed, a *Legal Notices* group is added to the Galette
 menu when a user is logged in, allowing administrators and staff members to
 define the settings of the plugin and edit the content of the pages.
 
-![Plugin's menu](images/menu.jpg)
+![Menu du plugin](images/menu.jpg)
 
-### Settings
+### Paramètres
 
-![Settings screen](images/settings.jpg)
+![Écran des préférences](images/settings.jpg)
 
 Several settings allow to change the plugin's behavior:
 
@@ -75,7 +76,7 @@ Several settings allow to change the plugin's behavior:
   instead. If enabled, setting the options above related to the cookie becomes
   irrelevant.
 
-### Pages content
+### Contenu des pages
 
 ![Pages content screen](images/content.jpg)
 
