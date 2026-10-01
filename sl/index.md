@@ -60,10 +60,10 @@ Several settings allow to change the plugin's behavior:
   menu.
 * **Fallback language for untranslated pages**
 * **Enable the consent manager**
-* **Hide the "Accept all" button** : do not enable this option if you need to
-  comply with the european legislation (GDPR & ePrivacy).
-* **Hide the "I decline" button** : do not enable this option if you need to
-  comply with the european legislation (GDPR & ePrivacy).
+* **Skrij gumb »Sprejmi vse«** : te možnosti ne omogočite, če morate biti
+  skladni z evropsko zakonodajo (GDPR in e-zasebnost).
+* **Skrij gumb »Zavrni«** : te možnosti ne omogočite, če morate biti skladni z
+  evropsko zakonodajo (GDPR in e-zasebnost).
 * **Cookie lifetime** : specify the maximum lifetime of the cookie used to store
   consent information in the browser (in days). After this period, the user's
   consent will be requested again.
