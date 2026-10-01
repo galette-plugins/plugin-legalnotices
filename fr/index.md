@@ -55,9 +55,9 @@ des pages.
 
 Plusieurs paramètres permettent de modifier le comportement du plugin :
 
-* **Enable de "Legal Information" page**
-* **Enable de "Terms of Service" page**
-* **Enable de "Privacy Policy" page**
+* **Enable the "Legal Information" page**
+* **Enable the "Terms of Service" page**
+* **Enable the "Privacy Policy" page**
 * **Move links in the "Public pages" menu** : links are added by default in the
   footer. Enable this option if you want to move them in the "Public pages"
   menu.
