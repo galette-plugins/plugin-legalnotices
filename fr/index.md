@@ -1,25 +1,26 @@
 ---
 title: Galette Legal Notices
-description: Plugin to manage legal notices
+description: Plugin pour gérer des pages de mentions légales
 ---
 
 Ce plugin fournit :
 
-* up to **3 pages** to write down legal notices :
-  - *Legal Information* (for all common legal notices)
-  - *Terms of Service* (in case you need to provide such terms)
-  - *Privacy Policy* (for all notices regarding personal data processing and the
-    use of cookies)
-* a **Consent Management Platform** (for advanced users)
+* jusqu'à **3 pages** pour écrire des mentions légales :
+  - *Informations légales* (pour toutes les mentions légales)
+  - *Conditions d'utilisation* (dans le cas où vous fournissez des telles
+    conditions)
+  - *Politique de confidentialité* (pour tous les avis concernant le traitement
+    des données personnelles et des cookies)
+* une **plate forme de gestion de consentement** (pour les utilisateurs avancés)
 
 ## Installation
 
 Tout d'abord, téléchargez le plugin :
 
-[![Get latest Legal Notices
-plugin!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
-[![Get Legal Notices plugin nightly
-build!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
+[![Obtenir le dernier plugin Legal Notices
+!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
+[![Obtenir la nightly du plugin Legal Notices
+!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
 
 Décompressez l'archive téléchargée dans le répertoire `plugins` de Galette. Par
 exemple, sous linux (en remplaçant *{url}* et *{version}* par les valeurs
@@ -37,13 +38,14 @@ Pour fonctionner, ce plugin requiert des tables dans la base de données.
 Référez-vous [à l'interface de gestion des plugins de
 Galette](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
 
-And that’s it; the *Legal Notices* plugin is installed. :)
+Et c'est tout ; le plugin *Legal Notices* est installé. :)
 
 ## Utilisation
 
-When the plugin is installed, a *Legal Notices* group is added to the Galette
-menu when a user is logged in, allowing administrators and staff members to
-define the settings of the plugin and edit the content of the pages.
+Lorsque le plugin est installé, un groupe *Legal Notices* est ajouté au menu de
+Galette lorsqu'un utilisateur est connecté, permettant aux administrateurs et
+membres du bureau de définir les préférences du plugin et modifier le contenu
+des pages.
 
 ![Menu du plugin](images/menu.jpg)
 
@@ -51,7 +53,7 @@ define the settings of the plugin and edit the content of the pages.
 
 ![Écran des préférences](images/settings.jpg)
 
-Several settings allow to change the plugin's behavior:
+Plusieurs paramètres permettent de modifier le comportement du plugin :
 
 * **Enable de "Legal Information" page**
 * **Enable de "Terms of Service" page**
