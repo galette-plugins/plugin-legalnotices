@@ -52,9 +52,9 @@ define the settings of the plugin and edit the content of the pages.
 
 Several settings allow to change the plugin's behavior:
 
-* **Enable de "Legal Information" page**
-* **Enable de "Terms of Service" page**
-* **Enable de "Privacy Policy" page**
+* **Enable the "Legal Information" page**
+* **Enable the "Terms of Service" page**
+* **Enable the "Privacy Policy" page**
 * **Move links in the "Public pages" menu** : links are added by default in the
   footer. Enable this option if you want to move them in the "Public pages"
   menu.
