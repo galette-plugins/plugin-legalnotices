@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: translations@galette.eu\n"
 "POT-Creation-Date: 2026-09-14 20:11+0200\n"
-"PO-Revision-Date: 2026-10-01 18:53+0000\n"
+"PO-Revision-Date: 2026-10-02 20:44+0000\n"
 "Last-Translator: Jože Felicijan <joze@felicijan.com>\n"
 "Language-Team: Slovenian <https://hosted.weblate.org/projects/galette/"
 "plugins-legalnotices/sl/>\n"
@@ -23,7 +23,7 @@ msgstr ""
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:66
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:47
 msgid "Pages content"
-msgstr ""
+msgstr "Vsebina strani"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:123
 #, php-format
