@@ -75,20 +75,21 @@ Plusieurs paramètres permettent de modifier le comportement du plugin :
   consentement une fois pour plusieurs domaines qui correspondent. Cela suppose
   que vous utilisiez Klaro! également sur les autres domaines. Par défaut, le
   domaine courant est utilisé.
-* **Enable "localStorage"** : by default, consent information is stored in the
-  browser with a cookie. Enable this option if you want to use "locaStorage"
-  instead. If enabled, setting the options above related to the cookie becomes
-  irrelevant.
+* ** Activer "localStorage"** : par défaut, les informations de consentement
+  sont stockées dans le navigateur avec un cookie. Activez cette option si vous
+  voulez utiliser "locaStorage" à la place. Si elle est activée, le réglage des
+  options ci-dessus relatives au cookie devient indifférent.
 
 ### Contenu des pages
 
-![Pages content screen](images/content.jpg)
+![Contenu des pages](images/content.jpg)
 
-The content of each **page** can be edited in every available **language**.
+Le contenu de chaque **page** peut être modifié dans chaque **langue**
+disponible.
 
-It is possible to edit the **page body** with the WYSIWYG editor. The following
-replacements values can be used (refer to the inline help from the user
-interface to get details) :
+Il est possible de modifier le **contenu de la page** avec l’éditeur WYSIWYG.
+Les valeurs de remplacement suivantes peuvent être utilisées (consultez l’aide
+contextuelle de l’interface pour plus de détails) :
 
 * `{ASSO_NAME}`
 * `{ASSO_SLOGAN}`
@@ -100,45 +101,46 @@ interface to get details) :
 * `{ASSO_PHONE_LINK}`
 * `{ASSO_EMAIL_LINK}`
 
-It is also possible to define an **external URL** when such a page already
-exists (on the association's website, for example). If it is defined, editing of
-the page body will be disabled, and users will be redirected to this URL.
+Il est également possible de définir une **URL externe** lorsque cette page
+existe déjà (sur le site Web de l'association, par exemple). Si elle est
+définie, l'édition du corps de page sera désactivée, et les utilisateurs seront
+redirigés vers cette URL.
 
-If both fields remain empty, the content of the *fallback language* chosen in
-the settings will be displayed to the users.
+Si les deux champs restent vides, le contenu de la *langue de remplacement*
+choisie dans les paramètres sera affiché aux utilisateurs.
 
-### About the Consent Manager Platform
+### À propos de la plateforme de gestion du consentement
 
-> **Note** — Using the Consent Management Plateform (CMP) requires that you
-> understand and know how to write JavaScript code.
+> **Note** — L'utilisation du Consent Management Plateform (CMP) exige que vous
+> compreniez et sachiez comment écrire un code JavaScript.
 
-Enabling the CMP in the settings does nothing useful on its own. By default, it
-will only display a message about the functional cookies stored by Galette.
+L'activation de la CMP dans les paramètres ne fait rien d'utile à elle seule.
+Par défaut, il affichera seulement un message sur les cookies fonctionnels
+stockés par Galette.
 
 ![Consent Manager modal](images/cmp-modal.jpg)
 
-It will also add a link in the footer to open the Consent Manager after consent
-has already been received.
+Un lien sera également ajouté dans le pied de page pour ouvrir le gestionnaire
+de consentement une fois que le consentement a déjà été donné.
 
 ![CMP link in footer](images/cmp-footer.jpg)
 
-Thus, the CMP is only useful when you add additional external services for which
-user consent is required to enable them in Galette, such as an analytics
-service.
+Ainsi, le CMP est uniquement utile lorsque vous ajoutez des services externes
+supplémentaires pour lesquels le consentement de l’utilisateur est requis afin
+de les activer dans Galette, comme un service d’analyse d’audience.
 
 ![CMP message](images/cmp-message.jpg)
 
-### How to add an external service ?
+### Comment ajouter un service externe ?
 
-> **Note** — This plugin uses [Klaro!](https://github.com/klaro-org/klaro-js) as
-> its Consent Management Platform (CMP). The following code examples describe
-> how to add a simple additional service. Please, read [Klaro!
-> documentation](https://klaro.org/docs) for further details and a better
-> understanding.
+> **Note** — Ce plugin utilise [Klaro!](https://github.com/klaro-org/klaro-js)
+> comme plate-forme de gestion des consentements (CMP). Les exemples de code
+> suivants décrivent comment ajouter un simple service supplémentaire. Veuillez
+> lire [Klaro! documentation](https://klaro.org/docs) pour plus de détails et
+> une meilleure compréhension.
 
-1. First, you have to create a custom template file named
-   `local_klaro_config.html.twig` in the `templates/default` folder of the
-   plugin.
+1. D'abord, vous devez créer un fichier de template personnalisé nommé
+   `local_klaro_config.html.twig` dans le dossier `templates/default` du plugin.
 
 2. Then, you need to add the service in the CMP. Use the following code in your
    custom template file (adjust it to your needs ; you can find more details in
