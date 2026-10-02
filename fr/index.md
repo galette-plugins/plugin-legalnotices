@@ -58,21 +58,23 @@ Plusieurs paramètres permettent de modifier le comportement du plugin :
 * **Activer la page "Informations légales"**
 * **Activer la page "Conditions d'utilisation"**
 * **Activer la page "Politique de confidentialité"**
-* **Move links in the "Public pages" menu** : links are added by default in the
-  footer. Enable this option if you want to move them in the "Public pages"
-  menu.
-* **Fallback language for untranslated pages**
-* **Enable the consent manager**
-* **Hide the "Accept all" button** : do not enable this option if you need to
-  comply with the european legislation (GDPR & ePrivacy).
-* **Hide the "I decline" button** : do not enable this option if you need to
-  comply with the european legislation (GDPR & ePrivacy).
-* **Cookie lifetime** : specify the maximum lifetime of the cookie used to store
-  consent information in the browser (in days). After this period, the user's
-  consent will be requested again.
-* **Cookie domain** : use this if you want to get consent once for multiple
-  matching domains. This supposes you are using Klaro! too on the other domains.
-  By default, the current domain is used.
+* **Déplace les lien dans le menu "Pages publiques"** : les liens sont ajoutés
+  par défaut dans le pied de page. Activez cette option si vous souhaitez les
+  déplacer dans le menu "Pages publiques".
+* **Langue de secours pour les pages non traduites**
+* **Activer le gestionnaire de consentement**
+* **Cacher le bouton "Accepter tout"** : ne pas activer cette option si vous
+  voulez respecter la législation européenne (GDPR & ePrivacy).
+* **Cache le bouton "Je décline"** : n'activez pas cette option si vous voulez
+  respecter la législation européenne (GDPR & ePrivacy).
+* **Durée de vie du cookie** : spécifiez la durée de vie maximale du cookie
+  utilisé pour stocker les informations de consentement dans le navigateur (en
+  jours). Après cette période, le consentement de l'utilisateur sera demandé de
+  nouveau.
+* **Domaine du cookie** : utilisez ceci si vous souhaitez demander le
+  consentement une fois pour plusieurs domaines qui correspondent. Cela suppose
+  que vous utilisiez Klaro! également sur les autres domaines. Par défaut, le
+  domaine courant est utilisé.
 * **Enable "localStorage"** : by default, consent information is stored in the
   browser with a cookie. Enable this option if you want to use "locaStorage"
   instead. If enabled, setting the options above related to the cookie becomes
