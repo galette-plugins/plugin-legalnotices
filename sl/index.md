@@ -1,28 +1,28 @@
 ---
-title: Galette Legal Notices
-description: Plugin to manage legal notices
+title: Pravna obvestila družbe Galette
+description: Vtičnik za upravljanje pravnih obvestil
 ---
 
-This plugin provides:
+Ta vtičnik omogoča:
 
-* up to **3 pages** to write down legal notices :
-  - *Legal Information* (for all common legal notices)
-  - *Terms of Service* (in case you need to provide such terms)
-  - *Privacy Policy* (for all notices regarding personal data processing and the
-    use of cookies)
-* a **Consent Management Platform** (for advanced users)
+* do **3 strani** za zapis pravnih obvestil :
+  - *Pravne informacije* (za vsa splošna pravna obvestila)
+  - *Pogoji storitve* (če morate zagotoviti takšne pogoje)
+  - *Politika zasebnosti* (za vsa obvestila v zvezi z obdelavo osebnih podatkov
+    in uporabo piškotkov)
+* **platforma za upravljanje privolitev** (za napredne uporabnike)
 
-## Installation
+## Namestitev
 
-First of all, download the plugin:
+Najprej prenesite vtičnik:
 
-[![Get latest Legal Notices
-plugin!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
-[![Get Legal Notices plugin nightly
-build!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
+[![Prenesite najnovejši vtičnik Legal
+Notices!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
+[![Prenesite nočno gradnjo vtičnika Legal
+Notices!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
 
-Extract the downloaded archive into Galette `plugins` directory. For example, on
-linux (replacing *{url}* and *{version}* with correct values):
+Razširite preneseni arhiv v mapo `plugins` programa Galette. Na primer v sistemu
+Linux (pri čemer *{url}* in *{version}* nadomestite z ustreznimi vrednostmi):
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -30,60 +30,59 @@ $ wget {url}
 $ tar xjvf galette-plugin-legal-notices-{version}.tar.bz2
 ```
 
-## Database initialisation
+## Inicializacija podatkovne baze
 
-In order to work, this plugin requires several tables in the database. See the
-[Galette plugins management
-interface](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
+Za delovanje ta vtičnik potrebuje več tabel v podatkovni bazi. Glejte [vmesnik
+za upravljanje vtičnikov
+Galette](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
 
-And that’s it; the *Legal Notices* plugin is installed. :)
+In to je to; vtičnik *Legal Notices* je nameščen. :)
 
-## Plugin usage
+## Uporaba vtičnika
 
-When the plugin is installed, a *Legal Notices* group is added to the Galette
-menu when a user is logged in, allowing administrators and staff members to
-define the settings of the plugin and edit the content of the pages.
+Po namestitvi vtičnika se v meniju programa Galette – ko je uporabnik prijavljen
+– prikaže skupina *Pravna obvestila*, ki skrbnikom in osebju omogoča določanje
+nastavitev vtičnika ter urejanje vsebine strani.
 
-![Plugin's menu](images/menu.jpg)
+![Meni vtičnika](images/menu.jpg)
 
-### Settings
+### Nastavitve
 
-![Settings screen](images/settings.jpg)
+![Zaslon z nastavitvami](images/settings.jpg)
 
-Several settings allow to change the plugin's behavior:
+Več nastavitev omogoča spreminjanje delovanja vtičnika:
 
 * **Enable the "Legal Information" page**
 * **Enable the "Terms of Service" page**
 * **Enable the "Privacy Policy" page**
-* **Move links in the "Public pages" menu** : links are added by default in the
-  footer. Enable this option if you want to move them in the "Public pages"
-  menu.
-* **Fallback language for untranslated pages**
-* **Enable the consent manager**
+* **Premik povezav v meni »Javne strani«** : povezave so privzeto dodane v nogo.
+  Omogočite to možnost, če jih želite premakniti v meni "Javne strani".
+* **Nadomestni jezik za neprevedene strani**
+* **Omogoči upravitelja privolitev**
 * **Skrij gumb »Sprejmi vse«** : te možnosti ne omogočite, če morate biti
   skladni z evropsko zakonodajo (GDPR in e-zasebnost).
 * **Skrij gumb »Zavrni«** : te možnosti ne omogočite, če morate biti skladni z
   evropsko zakonodajo (GDPR in e-zasebnost).
-* **Cookie lifetime** : specify the maximum lifetime of the cookie used to store
-  consent information in the browser (in days). After this period, the user's
-  consent will be requested again.
-* **Cookie domain** : use this if you want to get consent once for multiple
-  matching domains. This supposes you are using Klaro! too on the other domains.
-  By default, the current domain is used.
-* **Enable "localStorage"** : by default, consent information is stored in the
-  browser with a cookie. Enable this option if you want to use "locaStorage"
-  instead. If enabled, setting the options above related to the cookie becomes
-  irrelevant.
+* **Trajanje piškotka**: določite najdaljše trajanje piškotka, ki se uporablja
+  za shranjevanje podatkov o privolitvi v brskalniku (v dneh). Po tem obdobju bo
+  od uporabnika ponovno zahtevana privolitev.
+* **Domena piškotka**: to možnost uporabite, če želite pridobiti soglasje enkrat
+  za več ustreznih domen. To predpostavlja, da na drugih domenah prav tako
+  uporabljate Klaro!. Privzeto se uporabi trenutna domena.
+* **Omogoči "localStorage"**: privzeto se podatki o privolitvi v brskalniku
+  shranijo v piškotek. To možnost omogočite, če želite namesto tega uporabiti
+  "localStorage". Če je ta možnost omogočena, nastavitve zgoraj, ki se nanašajo
+  na piškotek, niso več pomembne.
 
-### Pages content
+### Vsebina strani
 
-![Pages content screen](images/content.jpg)
+![Zaslon z vsebino strani](images/content.jpg)
 
-The content of each **page** can be edited in every available **language**.
+Vsebino vsake **strani** je mogoče urejati v vseh razpoložljivih **jezikih**.
 
-It is possible to edit the **page body** with the WYSIWYG editor. The following
-replacements values can be used (refer to the inline help from the user
-interface to get details) :
+Vsebino strani lahko urejate z urejevalnikom WYSIWYG. Uporabite lahko naslednje
+nadomestne vrednosti (za podrobnosti glejte vgrajeno pomoč v uporabniškem
+vmesniku):
 
 * `{ASSO_NAME}`
 * `{ASSO_SLOGAN}`
@@ -95,20 +94,21 @@ interface to get details) :
 * `{ASSO_PHONE_LINK}`
 * `{ASSO_EMAIL_LINK}`
 
-It is also possible to define an **external URL** when such a page already
-exists (on the association's website, for example). If it is defined, editing of
-the page body will be disabled, and users will be redirected to this URL.
+Prav tako je mogoče določiti **zunanji URL**, če takšna stran že obstaja (na
+primer na spletnem mestu združenja). Če je ta določen, bo urejanje vsebine
+strani onemogočeno, uporabniki pa bodo preusmerjeni na navedeni URL.
 
-If both fields remain empty, the content of the *fallback language* chosen in
-the settings will be displayed to the users.
+Če obe polji ostaneta prazni, se uporabnikom prikaže vsebina v *nadomestnem
+jeziku*, izbranem v nastavitvah.
 
-### About the Consent Manager Platform
+### O platformi za upravljanje privolitev
 
-> **Note** — Using the Consent Management Plateform (CMP) requires that you
-> understand and know how to write JavaScript code.
+> **Opomba** — Uporaba platforme za upravljanje privolitev (CMP) zahteva
+> razumevanje in znanje pisanja kode JavaScript.
 
-Enabling the CMP in the settings does nothing useful on its own. By default, it
-will only display a message about the functional cookies stored by Galette.
+Omogočanje CMP-ja v nastavitvah samo po sebi ne prinaša nobene koristne
+funkcije. Privzeto bo prikazano le obvestilo o funkcionalnih piškotkih, ki jih
+shranjuje Galette.
 
 ![Consent Manager modal](images/cmp-modal.jpg)
 
