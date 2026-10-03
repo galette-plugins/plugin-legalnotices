@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: translations@galette.eu\n"
 "POT-Creation-Date: 2026-09-14 20:11+0200\n"
-"PO-Revision-Date: 2026-10-02 20:44+0000\n"
+"PO-Revision-Date: 2026-10-03 12:35+0000\n"
 "Last-Translator: Jože Felicijan <joze@felicijan.com>\n"
 "Language-Team: Slovenian <https://hosted.weblate.org/projects/galette/"
 "plugins-legalnotices/sl/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
 "n%100==4 ? 2 : 3;\n"
-"X-Generator: Weblate 2026.10\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:66
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:47
@@ -28,12 +28,12 @@ msgstr "Vsebina strani"
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:123
 #, php-format
 msgid "Invalid external URL. The \"%s\" page has not been modified."
-msgstr ""
+msgstr "Neveljaven zunanji URL. Stran »%s« ni bila spremenjena."
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:139
 #, php-format
 msgid "The \"%s\" page has been successfully modified."
-msgstr ""
+msgstr "Stran »%s« je bila uspešno spremenjena."
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:146
 #, php-format
@@ -41,91 +41,95 @@ msgid ""
 "An SQL error has occurred while storing the \"%s\" page. Please try again, "
 "and contact the administrator if the problem persists."
 msgstr ""
+"Med shranjevanjem strani \"%s\" je prišlo do napake SQL. Poskusite znova in "
+"se obrnite na skrbnika, če se težava ponovi."
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:259
 msgid "Legal Notices settings"
-msgstr ""
+msgstr "Nastavitve pravnih obvestil"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:295
 msgid "Legal Notices settings have been saved."
-msgstr ""
+msgstr "Nastavitve pravnih obvestil so shranjene."
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:298
 msgid ""
 "An SQL error has occurred while storing Legal Notices settings. Please try "
 "again, and contact the administrator if the problem persists."
 msgstr ""
+"Med shranjevanjem nastavitev Pravnih obvestil je prišlo do napake SQL. "
+"Poskusite znova in se obrnite na skrbnika, če se težava ponovi."
 
 #: ../lib/GaletteLegalNotices/Entity/Pages.php:91
 msgid "Your organisation phone number link"
-msgstr ""
+msgstr "Povezava do telefonske številke vaše organizacije"
 
 #: ../lib/GaletteLegalNotices/Entity/Pages.php:95
 msgid "Your organisation email address link"
-msgstr ""
+msgstr "Povezava do e-poštnega naslova vaše organizacije"
 
 #: ../lib/GaletteLegalNotices/Entity/Pages.php:522
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:87
 #: ../tempcache/scripts.html.twig:89
 msgid "Legal Information"
-msgstr ""
+msgstr "Pravne informacije"
 
 #: ../lib/GaletteLegalNotices/Entity/Pages.php:530
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:97
 #: ../tempcache/scripts.html.twig:77
 msgid "Terms of Service"
-msgstr ""
+msgstr "Pogoji storitve"
 
 #: ../lib/GaletteLegalNotices/Entity/Pages.php:538
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:107
 #: ../tempcache/scripts.html.twig:65
 msgid "Privacy Policy"
-msgstr ""
+msgstr "Politika zasebnosti"
 
 #: ../lib/GaletteLegalNotices/Entity/Pages.php:578
 msgid "Specific to the Legal Notices plugin"
-msgstr ""
+msgstr "Posebno za vtičnik Pravna obvestila"
 
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:65
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:120
 msgid "Legal Notices"
-msgstr ""
+msgstr "Pravna obvestila"
 
 #: ../tempcache/legalnotices_page.html.twig:70
 msgid "Edit this page"
-msgstr ""
+msgstr "Uredite to stran"
 
 #: ../tempcache/legalnotices_page.html.twig:86
 msgid "Last update"
-msgstr ""
+msgstr "Zadnja posodobitev"
 
 #: ../tempcache/legalnotices_page.html.twig:98
 msgid "This page has not been translated in your language"
-msgstr ""
+msgstr "Ta stran ni bila prevedena v vaš jezik"
 
 #: ../tempcache/legalnotices_pages.html.twig:66
 msgid "Choose a page"
-msgstr ""
+msgstr "Izberite stran"
 
 #: ../tempcache/legalnotices_pages.html.twig:78
 msgid "Language"
-msgstr ""
+msgstr "Jezik"
 
 #: ../tempcache/legalnotices_pages.html.twig:126
 msgid "Page"
-msgstr ""
+msgstr "Stran"
 
 #: ../tempcache/legalnotices_pages.html.twig:199
 msgid "Page body"
-msgstr ""
+msgstr "Telo strani"
 
 #: ../tempcache/legalnotices_pages.html.twig:205
 msgid "Or"
-msgstr ""
+msgstr "Ali"
 
 #: ../tempcache/legalnotices_pages.html.twig:214
 msgid "External URL"
-msgstr ""
+msgstr "Zunanji URL"
 
 #: ../tempcache/legalnotices_pages.html.twig:214
 msgid ""
@@ -133,48 +137,53 @@ msgid ""
 "content defined in the previous field. Setting this option disables editing "
 "of the page body."
 msgstr ""
+"Vnesite URL, na katerega bo uporabnik preusmerjen namesto prikaza vsebine, "
+"določene v prejšnjem polju. Nastavitev te možnosti onemogoči urejanje telesa "
+"strani."
 
 #: ../tempcache/legalnotices_pages.html.twig:216
 msgid "Use a valid external URL"
-msgstr ""
+msgstr "Uporabite veljaven zunanji URL"
 
 #: ../tempcache/legalnotices_settings.html.twig:70
 msgid "Pages"
-msgstr ""
+msgstr "Strani"
 
 #: ../tempcache/legalnotices_settings.html.twig:76
 msgid "Enable the \"Legal Information\" page"
-msgstr ""
+msgstr "Omogočite stran »Pravne informacije«"
 
 #: ../tempcache/legalnotices_settings.html.twig:80
 msgid "Enable the \"Terms of Service\" page"
-msgstr ""
+msgstr "Omogočite stran »Pogoji storitve«"
 
 #: ../tempcache/legalnotices_settings.html.twig:84
 msgid "Enable the \"Privacy Policy\" page"
-msgstr ""
+msgstr "Omogočite stran »Politika zasebnosti«"
 
 #: ../tempcache/legalnotices_settings.html.twig:91
 msgid "Move links in the \"Public pages\" menu"
-msgstr ""
+msgstr "Premaknite povezave v meniju »Javne strani«"
 
 #: ../tempcache/legalnotices_settings.html.twig:91
 msgid ""
 "Links are added by default in the footer. Enable this option if you want to "
 "move them in the \"Public pages\" menu."
 msgstr ""
+"Povezave so privzeto dodane v nogo. Omogočite to možnost, če jih želite "
+"premakniti v meniju »Javne strani«."
 
 #: ../tempcache/legalnotices_settings.html.twig:99
 msgid "Fallback language for untranslated pages"
-msgstr ""
+msgstr "Nadomestni jezik za neprevedene strani"
 
 #: ../tempcache/legalnotices_settings.html.twig:137
 msgid "Consent Manager Platform"
-msgstr ""
+msgstr "Platforma Consent Manager"
 
 #: ../tempcache/legalnotices_settings.html.twig:143
 msgid "Enable the consent manager"
-msgstr ""
+msgstr "Omogoči upravitelja soglasja"
 
 #: ../tempcache/legalnotices_settings.html.twig:143
 msgid ""
@@ -182,10 +191,13 @@ msgid ""
 "in the consent manager. Read the plugin documentation to learn how to do "
 "this."
 msgstr ""
+"Če omogočite to možnost, morate določiti, katere storitve naj bodo vključene "
+"v upravitelja soglasij. Preberite dokumentacijo vtičnika, če želite "
+"izvedeti, kako to storiti."
 
 #: ../tempcache/legalnotices_settings.html.twig:147
 msgid "Hide the \"Accept all\" button"
-msgstr ""
+msgstr "Skrij gumb \"Sprejmi vse\""
 
 #: ../tempcache/legalnotices_settings.html.twig:147
 #: ../tempcache/legalnotices_settings.html.twig:151
@@ -193,14 +205,16 @@ msgid ""
 "Do not enable this option if you need to comply with the european "
 "legislation (GDPR & ePrivacy)."
 msgstr ""
+"Ne omogočite te možnosti, če morate biti v skladu z evropsko zakonodajo "
+"(GDPR & ePrivacy)."
 
 #: ../tempcache/legalnotices_settings.html.twig:151
 msgid "Hide the \"I decline\" button"
-msgstr ""
+msgstr "Skrij gumb \"Zavračam\""
 
 #: ../tempcache/legalnotices_settings.html.twig:155
 msgid "Cookie lifetime"
-msgstr ""
+msgstr "Življenjska doba piškotka"
 
 #: ../tempcache/legalnotices_settings.html.twig:155
 msgid ""
@@ -208,20 +222,25 @@ msgid ""
 "in the browser (in days). After this period, the user's consent will be "
 "requested again."
 msgstr ""
+"Določite najdaljšo življenjsko dobo piškotka, ki se uporablja za "
+"shranjevanje informacij o soglasju v brskalniku (v dnevih). Po preteku tega "
+"obdobja bo uporabnik ponovno zahteval soglasje."
 
 #: ../tempcache/legalnotices_settings.html.twig:159
 msgid "Cookie domain"
-msgstr ""
+msgstr "Domena piškotkov"
 
 #: ../tempcache/legalnotices_settings.html.twig:159
 msgid ""
 "Use this if you want to get consent once for multiple matching domains. By "
 "default, the current domain is used."
 msgstr ""
+"To uporabite, če želite enkrat pridobiti soglasje za več ujemajočih se "
+"domen. Privzeto se uporablja trenutna domena."
 
 #: ../tempcache/legalnotices_settings.html.twig:163
 msgid "Enable \"localStorage\""
-msgstr ""
+msgstr "Omogoči \"localStorage\""
 
 #: ../tempcache/legalnotices_settings.html.twig:163
 msgid ""
@@ -229,44 +248,57 @@ msgid ""
 "Enable this option if you want to use \"locaStorage\" instead. If enabled, "
 "setting the options above related to the cookie becomes irrelevant."
 msgstr ""
+"Podatki o soglasju so privzeto shranjeni v brskalniku s piškotkom. Omogočite "
+"to možnost, če želite namesto tega uporabiti \"locaStorage\". Če je "
+"omogočeno, nastavitev zgornjih možnosti, povezanih s piškotkom, postane "
+"nepomembna."
 
 #: ../tempcache/scripts.html.twig:107
 msgid ""
 "The consent manager could not be loaded. It may have been blocked by an ad "
 "blocker."
 msgstr ""
+"Upravitelja soglasij ni bilo mogoče naložiti. Morda ga je blokiral program "
+"za blokiranje oglasov."
 
 #: ../tempcache/scripts.html.twig:156
 msgid "Services we would like to use"
-msgstr ""
+msgstr "Storitve, ki jih želimo uporabljati"
 
 #: ../tempcache/scripts.html.twig:160
 msgid ""
 "Here you can assess and customize the services that we'd like to use on this "
 "website. You're in charge! Enable or disable services as you see fit."
 msgstr ""
+"Tukaj lahko ocenite in prilagodite storitve, ki jih želimo uporabljati na "
+"tem spletnem mestu. Ti si glavni! Omogočite ali onemogočite storitve, kot se "
+"vam zdi primerno."
 
 #: ../tempcache/scripts.html.twig:166
 msgid "Testing mode!"
-msgstr ""
+msgstr "Testni način!"
 
 #: ../tempcache/scripts.html.twig:170
 msgid "There were changes since your last visit, please renew your consent."
 msgstr ""
+"Od vašega zadnjega obiska je prišlo do sprememb, prosimo obnovite vaše "
+"soglasje."
 
 #: ../tempcache/scripts.html.twig:174
 msgid ""
 "Hi! Could we please enable some additional services for {purposes}? You can "
 "always change or withdraw your consent later."
 msgstr ""
+"zdravo Ali lahko omogočimo nekaj dodatnih storitev za {namene}? Svoje "
+"soglasje lahko pozneje kadar koli spremenite ali prekličete."
 
 #: ../tempcache/scripts.html.twig:178
 msgid "Let me choose"
-msgstr ""
+msgstr "Naj izberem"
 
 #: ../tempcache/scripts.html.twig:185
 msgid "Service Provision"
-msgstr ""
+msgstr "Zagotavljanje storitev"
 
 #: ../tempcache/scripts.html.twig:189
 msgid ""
@@ -274,66 +306,77 @@ msgid ""
 "You cannot disable them here as the service would not work correctly "
 "otherwise."
 msgstr ""
+"Te storitve so bistvenega pomena za pravilno delovanje te spletne strani. "
+"Tukaj jih ne morete onemogočiti, saj drugače storitev ne bi delovala "
+"pravilno."
 
 #: ../tempcache/scripts.html.twig:195
 msgid "Performance Optimization"
-msgstr ""
+msgstr "Optimizacija zmogljivosti"
 
 #: ../tempcache/scripts.html.twig:199
 msgid ""
 "These services process personal information to optimize the service that "
 "this website offers."
 msgstr ""
+"Te storitve obdelujejo osebne podatke za optimizacijo storitve, ki jo ponuja "
+"to spletno mesto."
 
 #: ../tempcache/scripts.html.twig:205
 msgid "Analytics"
-msgstr ""
+msgstr "Analitika"
 
 #: ../tempcache/scripts.html.twig:209
 msgid ""
 "These services process personal information to let us know how you use this "
 "website."
 msgstr ""
+"Te storitve obdelujejo osebne podatke, da nam sporočijo, kako uporabljate to "
+"spletno mesto."
 
 #: ../tempcache/scripts.html.twig:215
 msgid "Marketing"
-msgstr ""
+msgstr "Trženje"
 
 #: ../tempcache/scripts.html.twig:219
 msgid ""
 "These services process personal information to show you relevant content "
 "about products, services or topics that you might be interested in."
 msgstr ""
+"Te storitve obdelujejo osebne podatke, da vam prikažejo ustrezno vsebino o "
+"izdelkih, storitvah ali temah, ki bi vas utegnile zanimati."
 
 #: ../tempcache/scripts.html.twig:225
 msgid "Advertising"
-msgstr ""
+msgstr "Oglaševanje"
 
 #: ../tempcache/scripts.html.twig:229
 msgid ""
 "These services process personal information to show you personalized or "
 "interest-based advertisements."
 msgstr ""
+"Te storitve obdelujejo osebne podatke, da vam prikažejo prilagojene oglase "
+"ali oglase, ki temeljijo na zanimanju."
 
 #: ../tempcache/scripts.html.twig:236
 msgid "service"
-msgstr ""
+msgstr "storitev"
 
 #: ../tempcache/scripts.html.twig:240
 msgid "services"
-msgstr ""
+msgstr "storitve"
 
 #: ../tempcache/scripts.html.twig:245
 msgid "That's ok"
-msgstr ""
+msgstr "To je v redu"
 
 #: ../tempcache/scripts.html.twig:249
 msgid "Save"
-msgstr ""
+msgstr "Shrani"
 
 #: ../tempcache/scripts.html.twig:253
 msgid "I decline"
-msgstr ""
+msgstr "Zavračam"
 
 #: ../tempcache/scripts.html.twig:257
 msgid "Close"
@@ -341,59 +384,59 @@ msgstr "Zapri"
 
 #: ../tempcache/scripts.html.twig:261
 msgid "Accept all"
-msgstr ""
+msgstr "Sprejmi vse"
 
 #: ../tempcache/scripts.html.twig:265
 msgid "Accept selected"
-msgstr ""
+msgstr "Sprejmi izbrano"
 
 #: ../tempcache/scripts.html.twig:274
 msgid "privacy policy"
-msgstr ""
+msgstr "politiko zasebnosti"
 
 #: ../tempcache/scripts.html.twig:278
 msgid "To learn more, please read our {privacyPolicy}."
-msgstr ""
+msgstr "Če želite izvedeti več, preberite našo {politiko zasebnosti}."
 
 #: ../tempcache/scripts.html.twig:285
 msgid "Enable or disable all services"
-msgstr ""
+msgstr "Omogočite ali onemogočite vse storitve"
 
 #: ../tempcache/scripts.html.twig:289
 msgid "Use this switch to enable or disable all services."
-msgstr ""
+msgstr "S tem stikalom omogočite ali onemogočite vse storitve."
 
 #: ../tempcache/scripts.html.twig:295
 msgid "(opt-out)"
-msgstr ""
+msgstr "(odjava)"
 
 #: ../tempcache/scripts.html.twig:299
 msgid "This service is loaded by default (but you can opt out)"
-msgstr ""
+msgstr "Ta storitev je privzeto naložena (vendar se lahko odjavite)"
 
 #: ../tempcache/scripts.html.twig:305
 msgid "(always required)"
-msgstr ""
+msgstr "(vedno obvezno)"
 
 #: ../tempcache/scripts.html.twig:309
 msgid "This services is always required"
-msgstr ""
+msgstr "Te storitve so vedno potrebne"
 
 #: ../tempcache/scripts.html.twig:314
 msgid "purposes:"
-msgstr ""
+msgstr "nameni:"
 
 #: ../tempcache/scripts.html.twig:318
 msgid "purpose:"
-msgstr ""
+msgstr "namen:"
 
 #: ../tempcache/scripts.html.twig:323
 msgid "Realized with Klaro!"
-msgstr ""
+msgstr "Realizirano s Klaro!"
 
 #: ../tempcache/scripts.html.twig:328
 msgid "Do you want to load external content supplied by {title}?"
-msgstr ""
+msgstr "Ali želite naložiti zunanjo vsebino, ki jo zagotavlja {title}?"
 
 #: ../tempcache/scripts.html.twig:332
 msgid "Yes"
@@ -401,14 +444,16 @@ msgstr "Da"
 
 #: ../tempcache/scripts.html.twig:336
 msgid "Always"
-msgstr ""
+msgstr "Vedno"
 
 #: ../tempcache/scripts.html.twig:351
 msgid ""
 "The cookies used by Galette do not store your personal data and do not track "
 "you."
 msgstr ""
+"Piškotki, ki jih uporablja Galette, ne shranjujejo vaših osebnih podatkov in "
+"vam ne sledijo."
 
 #: ../tempcache/scripts.html.twig:360
 msgid "Consent Manager"
-msgstr ""
+msgstr "Urednik vsebin"
