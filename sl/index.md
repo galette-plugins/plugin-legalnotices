@@ -103,7 +103,7 @@ jeziku*, izbranem v nastavitvah.
 
 ### O platformi za upravljanje privolitev
 
-> **Opomba** — Uporaba platforme za upravljanje privolitev (CMP) zahteva
+> **Note** — Uporaba platforme za upravljanje privolitev (CMP) zahteva
 > razumevanje in znanje pisanja kode JavaScript.
 
 Omogočanje CMP-ja v nastavitvah samo po sebi ne prinaša nobene koristne
@@ -125,7 +125,7 @@ analitike.
 
 ### Kako dodati zunanjo storitev?
 
-> **Opomba** – Ta vtičnik uporablja
+> **Note** – Ta vtičnik uporablja
 > [Klaro!](https://github.com/klaro-org/klaro-js) kot svojo platformo za
 > upravljanje privolitve (CMP). Naslednji primeri kode opisujejo, kako dodati
 > preprosto dodatno storitev. Prosim, preberite [Klaro!
@@ -157,15 +157,15 @@ analitike.
    </script>
    ```
 
-   Vtičnik ponuja več vnaprej določenih `namenov` za organiziranje dodatnih
+   Vtičnik ponuja več vnaprej določenih `purposes` za organiziranje dodatnih
    storitev v Consent Managerju:
 
-   * `funkcionalno` (storitve v tej kategoriji so obvezne in jih uporabnik ne
-     more zavrniti)
-   * `izvedba`
-   * `analitika`
-   * `trženje`
-   * `oglaševanje`
+   * `functional` (storitve v tej kategoriji so obvezne in jih uporabnik ne more
+     zavrniti)
+   * `performance`
+   * `analytics`
+   * `marketing`
+   * `advertising`
 
 3. Nazadnje morate v svojo datoteko predloge po meri dodati dejansko kodo, ki jo
    nudi storitev, *vendar z manjšimi spremembami* atributov oznake `script` (za
