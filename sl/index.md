@@ -52,9 +52,9 @@ nastavitev vtičnika ter urejanje vsebine strani.
 
 Več nastavitev omogoča spreminjanje delovanja vtičnika:
 
-* **Enable the "Legal Information" page**
-* **Enable the "Terms of Service" page**
-* **Enable the "Privacy Policy" page**
+* **Omogoči stran »Pravne informacije«**
+* **Omogoči stran »Pogoji storitve«**
+* **Omogoči stran »Politika zasebnosti«**
 * **Premik povezav v meni »Javne strani«** : povezave so privzeto dodane v nogo.
   Omogočite to možnost, če jih želite premakniti v meni "Javne strani".
 * **Nadomestni jezik za neprevedene strani**
@@ -80,9 +80,9 @@ Več nastavitev omogoča spreminjanje delovanja vtičnika:
 
 Vsebino vsake **strani** je mogoče urejati v vseh razpoložljivih **jezikih**.
 
-Vsebino strani lahko urejate z urejevalnikom WYSIWYG. Uporabite lahko naslednje
-nadomestne vrednosti (za podrobnosti glejte vgrajeno pomoč v uporabniškem
-vmesniku):
+Možno je urejati **telo strani** z urejevalnikom WYSIWYG. Uporabite lahko
+naslednje nadomestne vrednosti (za podrobnosti si oglejte vgrajeno pomoč v
+uporabniškem vmesniku):
 
 * `{ASSO_NAME}`
 * `{ASSO_SLOGAN}`
@@ -110,37 +110,37 @@ Omogočanje CMP-ja v nastavitvah samo po sebi ne prinaša nobene koristne
 funkcije. Privzeto bo prikazano le obvestilo o funkcionalnih piškotkih, ki jih
 shranjuje Galette.
 
-![Consent Manager modal](images/cmp-modal.jpg)
+![Modal upravitelja soglasja](images/cmp-modal.jpg)
 
-It will also add a link in the footer to open the Consent Manager after consent
-has already been received.
+Dodal bo tudi povezavo v nogo za odpiranje upravitelja soglasja, potem ko je
+soglasje že prejeto.
 
-![CMP link in footer](images/cmp-footer.jpg)
+![povezava CMP v nogi](images/cmp-footer.jpg)
 
-Thus, the CMP is only useful when you add additional external services for which
-user consent is required to enable them in Galette, such as an analytics
-service.
+Tako je CMP uporaben le, ko dodate dodatne zunanje storitve, za katere je
+potrebno soglasje uporabnika, da jih omogočite v Galette, kot je storitev
+analitike.
 
-![CMP message](images/cmp-message.jpg)
+![Sporočilo CMP](images/cmp-message.jpg)
 
-### How to add an external service ?
+### Kako dodati zunanjo storitev?
 
-> **Note** — This plugin uses [Klaro!](https://github.com/klaro-org/klaro-js) as
-> its Consent Management Platform (CMP). The following code examples describe
-> how to add a simple additional service. Please, read [Klaro!
-> documentation](https://klaro.org/docs) for further details and a better
-> understanding.
+> **Opomba** – Ta vtičnik uporablja
+> [Klaro!](https://github.com/klaro-org/klaro-js) kot svojo platformo za
+> upravljanje privolitve (CMP). Naslednji primeri kode opisujejo, kako dodati
+> preprosto dodatno storitev. Prosim, preberite [Klaro!
+> dokumentacija](https://klaro.org/docs) za nadaljnje podrobnosti in boljše
+> razumevanje.
 
-1. First, you have to create a custom template file named
-   `local_klaro_config.html.twig` in the `templates/default` folder of the
-   plugin.
+1. Najprej morate ustvariti datoteko predloge po meri z imenom
+   `local_klaro_config.html.twig` v mapi `templates/default` vtičnika.
 
-2. Then, you need to add the service in the CMP. Use the following code in your
-   custom template file (adjust it to your needs ; you can find more details in
-   the documentation of the CMP ; please read the [Annotated Config
+2. Nato morate storitev dodati v CMP. Uporabite naslednjo kodo v svoji datoteki
+   s predlogo po meri (prilagodite jo svojim potrebam; več podrobnosti najdete v
+   dokumentaciji CMP; preberite [Anotated Config
    File](https://klaro.org/docs/integration/annotated-configuration)).
 
-   Example :
+   Primer:
 
    ```
    <script type="text/javascript">
@@ -157,23 +157,22 @@ service.
    </script>
    ```
 
-   The plugin provides several predefined `purposes` to organize addtional
-   services in the Consent Manager :
+   Vtičnik ponuja več vnaprej določenih `namenov` za organiziranje dodatnih
+   storitev v Consent Managerju:
 
-   * `functional` (services in this category are mandatory and cannot be
-     declined by the user)
-   * `performance`
-   * `analytics`
-   * `marketing`
-   * `advertising`
+   * `funkcionalno` (storitve v tej kategoriji so obvezne in jih uporabnik ne
+     more zavrniti)
+   * `izvedba`
+   * `analitika`
+   * `trženje`
+   * `oglaševanje`
 
-3. Finally, you need to add in your custom template file the actual code
-   provided by the service, *but with minor changes* to the attributes of the
-   `script` tag (for more explanations, read the second part of the [Getting
-   Started](https://klaro.org/docs/getting-started) chapter in the documentation
-   of the CMP).
+3. Nazadnje morate v svojo datoteko predloge po meri dodati dejansko kodo, ki jo
+   nudi storitev, *vendar z manjšimi spremembami* atributov oznake `script` (za
+   več razlag preberite drugi del poglavja [Kako
+   začeti](https://klaro.org/docs/getting-started) v dokumentaciji CMP).
 
-   Example :
+   Primer:
 
    ```
    <script type="text/plain" data-type="application/javascript" data-src="https://YOUR_MATOMO_URL" data-name="matomo"></script>
