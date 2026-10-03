@@ -118,18 +118,18 @@ L'activation de la CMP dans les paramètres ne fait rien d'utile à elle seule.
 Par défaut, il affichera seulement un message sur les cookies fonctionnels
 stockés par Galette.
 
-![Consent Manager modal](images/cmp-modal.jpg)
+![Modale du gestionnaire de consentement](images/cmp-modal.jpg)
 
 Un lien sera également ajouté dans le pied de page pour ouvrir le gestionnaire
 de consentement une fois que le consentement a déjà été donné.
 
-![CMP link in footer](images/cmp-footer.jpg)
+![Lien CMP en bas de page](images/cmp-footer.jpg)
 
 Ainsi, le CMP est uniquement utile lorsque vous ajoutez des services externes
 supplémentaires pour lesquels le consentement de l’utilisateur est requis afin
 de les activer dans Galette, comme un service d’analyse d’audience.
 
-![CMP message](images/cmp-message.jpg)
+![Message CMP](images/cmp-message.jpg)
 
 ### Comment ajouter un service externe ?
 
@@ -142,12 +142,13 @@ de les activer dans Galette, comme un service d’analyse d’audience.
 1. D'abord, vous devez créer un fichier de template personnalisé nommé
    `local_klaro_config.html.twig` dans le dossier `templates/default` du plugin.
 
-2. Then, you need to add the service in the CMP. Use the following code in your
-   custom template file (adjust it to your needs ; you can find more details in
-   the documentation of the CMP ; please read the [Annotated Config
-   File](https://klaro.org/docs/integration/annotated-configuration)).
+2. Ensuite, vous devez ajouter le service dans le CMP. Utilisez le code suivant
+   dans votre fichier de gabarit personnalisé (ajustez-le à vos besoins ; vous
+   pouvez trouver plus de détails dans la documentation de CMP ; veuillez lire
+   le [fichier de configuration
+   annoté](https://klaro.org/docs/integration/annotated-configuration)).
 
-   Example :
+   Exemple :
 
    ```
    <script type="text/javascript">
@@ -164,23 +165,23 @@ de les activer dans Galette, comme un service d’analyse d’audience.
    </script>
    ```
 
-   The plugin provides several predefined `purposes` to organize addtional
-   services in the Consent Manager :
+   Le plugin fournit plusieurs `raisons` prédéfinies pour organiser des services
+   additionnels au gestionnaire de consentement :
 
-   * `functional` (services in this category are mandatory and cannot be
-     declined by the user)
+   * `fonctionnel` (les services de cette catégorie sont obligatoires et ne
+     peuvent être refusés par l'utilisateur)
    * `performance`
-   * `analytics`
+   * `Mesures d'audience`
    * `marketing`
-   * `advertising`
+   * `publicité`
 
-3. Finally, you need to add in your custom template file the actual code
-   provided by the service, *but with minor changes* to the attributes of the
-   `script` tag (for more explanations, read the second part of the [Getting
-   Started](https://klaro.org/docs/getting-started) chapter in the documentation
-   of the CMP).
+3. Enfin, vous devez ajouter dans votre fichier de gabarit personnalisé le code
+   actuellement fourni par le service, *mais avec des modifications mineures*
+   aux attributs de la balise `script` (pour plus d'explications, lisez la
+   deuxième partie du chapitre [prise en
+   main](https://klaro.org/docs/getting-started) de la documentation de CMP.
 
-   Example :
+   Exemple :
 
    ```
    <script type="text/plain" data-type="application/javascript" data-src="https://YOUR_MATOMO_URL" data-name="matomo"></script>
