@@ -130,7 +130,7 @@ class Settings
                     $stmt->execute(
                         [
                             'name' => $p['name'],
-                            'value' => $p['value']
+                            'value' => $this->toDbValue($p['value'])
                         ]
                     );
                 }
@@ -205,7 +205,7 @@ class Settings
                 $stmt->execute(
                     [
                         'name' => $k,
-                        'value' => $v
+                        'value' => $this->toDbValue($v)
                     ]
                 );
             }
@@ -283,6 +283,19 @@ class Settings
     }
 
     /**
+     * Convert a value to be stored in the database
+     *
+     * Laminas binds booleans as PDO::PARAM_BOOL, that PostgreSQL stores as 't' or 'f'
+     * in a text column; and (bool)'f' is true.
+     *
+     * @param mixed $value Value to convert
+     */
+    private function toDbValue(mixed $value): mixed
+    {
+        return is_bool($value) ? (int)$value : $value;
+    }
+
+    /**
      * Store values in the database
      */
     public function store(): bool
@@ -305,7 +318,7 @@ class Settings
 
                 $stmt->execute(
                     [
-                        'value'  => $value,
+                        'value'  => $this->toDbValue($value),
                         'name'  => $k
                     ]
                 );
@@ -367,7 +380,8 @@ class Settings
             }
 
             if (in_array($name, $types['bool']) && $value !== '') {
-                $value = (bool)$value;
+                //PostgreSQL stored false as 'f' before values were converted
+                $value = $value !== 'f' && (bool)$value;
             }
 
             return $value;
