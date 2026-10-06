@@ -16,6 +16,7 @@ use Galette\Core\Login;
 use Galette\Core\Plugins\MenuProviderInterface;
 use Galette\Core\Plugins\PublicPagesProviderInterface;
 use Galette\Core\GalettePlugin;
+use Galette\Core\Preferences;
 use GaletteLegalNotices\Entity\Pages;
 use GaletteLegalNotices\Entity\Settings;
 
@@ -150,6 +151,19 @@ class PluginGaletteLegalnotices extends GalettePlugin implements MenuProviderInt
     public function getPublicPageLabel(string $id): string
     {
         return _T("Legal Notices", "legalnotices");
+    }
+
+    /**
+     * Get footer links visibility
+     */
+    public static function getLinksVisibility(): bool
+    {
+        /**
+         * @var Preferences $preferences
+         * @var Login $login
+         */
+        global $preferences, $login;
+        return $preferences->showPublicPage($login, 'pref_legalnotices_publicpages_visibility_notices');
     }
 
     /**
