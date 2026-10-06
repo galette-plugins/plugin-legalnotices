@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: translations@galette.eu\n"
 "POT-Creation-Date: 2026-09-14 20:11+0200\n"
-"PO-Revision-Date: 2026-09-30 19:11+0000\n"
+"PO-Revision-Date: 2026-10-06 05:59+0000\n"
 "Last-Translator: Johan Cwiklinski <trasher@x-tnd.be>\n"
 "Language-Team: Tamil <https://hosted.weblate.org/projects/galette/plugins-"
 "legalnotices/ta/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 2026.10.dev0\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:66
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:47
@@ -396,7 +396,7 @@ msgstr ""
 
 #: ../tempcache/scripts.html.twig:332
 msgid "Yes"
-msgstr ""
+msgstr "ஆம்"
 
 #: ../tempcache/scripts.html.twig:336
 msgid "Always"
