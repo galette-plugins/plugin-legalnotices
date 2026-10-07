@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: translations@galette.eu\n"
 "POT-Creation-Date: 2026-10-07 14:40+0200\n"
-"PO-Revision-Date: 2026-09-30 19:11+0000\n"
-"Last-Translator: Johan Cwiklinski <trasher@x-tnd.be>\n"
+"PO-Revision-Date: 2026-10-08 10:25+0000\n"
+"Last-Translator: Guillaume AGNIERAY <dev@agnieray.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/galette/plugins-"
 "legalnotices/fr/>\n"
 "Language: fr_FR\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.10.dev0\n"
+"X-Generator: Weblate 2026.10.1.dev0\n"
 
 #: ../lib/GaletteLegalNotices/Controllers/MainController.php:68
 #: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:49
@@ -219,20 +219,13 @@ msgid "Enable \"localStorage\""
 msgstr "Activer \"localStorage\""
 
 #: ../templates/default/legalnotices_settings.html.twig:85
-#, fuzzy
-#| msgid ""
-#| "By default, consent information is stored in the browser with a cookie. "
-#| "Enable this option if you want to use \"locaStorage\" instead. If "
-#| "enabled, setting the options above related to the cookie becomes "
-#| "irrelevant."
 msgid ""
 "By default, consent information is stored in the browser with a cookie. "
 "Enable this option if you want to use \"locaStorage\" instead."
 msgstr ""
 "Par défaut, les informations de consentement sont stockées dans le "
-"navigateur avec un cookie. Activez cette option si vous souhaitez utiliser "
-"« locaStorage » à la place. Si cette option est activée, le paramétrage des "
-"options ci-dessus liées au cookie devient inutile."
+"navigateur avec un cookie. Activez cette option si vous souhaitez utiliser « "
+"locaStorage » à la place."
 
 #: ../templates/default/legalnotices_settings.html.twig:93
 msgid "Cookie lifetime"
