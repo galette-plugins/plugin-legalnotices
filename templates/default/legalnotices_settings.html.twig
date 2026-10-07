@@ -79,26 +79,28 @@
                     label: _T('Hide the "I decline" button', "legalnotices"),
                     tip: _T("Do not enable this option if you need to comply with the european legislation (GDPR & ePrivacy).", "legalnotices")
                 } %}
+                {% include "components/forms/checkbox.html.twig" with {
+                    id: 'enable_localstorage',
+                    value: '1',
+                    checked: settings.enable_localstorage == 1 ? true : false,
+                    label: _T('Enable "localStorage"', "legalnotices"),
+                    tip: _T('By default, consent information is stored in the browser with a cookie. Enable this option if you want to use "locaStorage" instead.', "legalnotices")
+                } %}
                 {% include "components/forms/number.html.twig" with {
                     id: 'cookie_expiration',
-                    component_class: 'inline field',
+                    component_id: 'cookie_expiration_field',
+                    component_class: settings.enable_localstorage == 1 ? 'inline field displaynone' : 'inline field',
                     value: settings.cookie_expiration,
                     label: _T("Cookie lifetime", "legalnotices"),
                     tip: _T("Specify the maximum lifetime of the cookie used to store consent information in the browser (in days). After this period, the user's consent will be requested again.", "legalnotices")
                 } %}
                 {% include "components/forms/text.html.twig" with {
                     id: 'cookie_domain',
-                    component_class: 'inline field',
+                    component_id: 'cookie_domain_field',
+                    component_class: settings.enable_localstorage == 1 ? 'inline field displaynone' : 'inline field',
                     value: settings.cookie_domain,
                     label: _T("Cookie domain", "legalnotices"),
                     tip: _T("Use this if you want to get consent once for multiple matching domains. By default, the current domain is used.", "legalnotices")
-                } %}
-                {% include "components/forms/checkbox.html.twig" with {
-                    id: 'enable_localstorage',
-                    value: '1',
-                    checked: settings.enable_localstorage == 1 ? true : false,
-                    label: _T('Enable "localStorage"', "legalnotices"),
-                    tip: _T('By default, consent information is stored in the browser with a cookie. Enable this option if you want to use "locaStorage" instead. If enabled, setting the options above related to the cookie becomes irrelevant.', "legalnotices")
                 } %}
             </div>
 
@@ -109,4 +111,19 @@
             </div>
         </form>
     {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+        <script type="text/javascript">
+            $(function(){
+                let _enable_localstorage = document.getElementById('enable_localstorage');
+                let _cookie_expiration = document.getElementById('cookie_expiration_field');
+                let _cookie_domain = document.getElementById('cookie_domain_field');
+                _enable_localstorage.addEventListener('change', function () {
+                    _cookie_expiration.classList.toggle('displaynone');
+                    _cookie_domain.classList.toggle('displaynone');
+                    return;
+                });
+            });
+        </script>
 {% endblock %}
