@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: translations@galette.eu\n"
-"POT-Creation-Date: 2026-09-14 20:11+0200\n"
+"POT-Creation-Date: 2026-10-07 14:40+0200\n"
 "PO-Revision-Date: 2025-03-20 10:23+0100\n"
 "Last-Translator: Guillaume AGNIERAY <dev@agnieray.net>\n"
 "Language-Team: \n"
@@ -18,395 +18,395 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.2.2\n"
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:66
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:47
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:68
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:49
 msgid "Pages content"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:123
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:130
 #, php-format
 msgid "Invalid external URL. The \"%s\" page has not been modified."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:139
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:146
 #, php-format
 msgid "The \"%s\" page has been successfully modified."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:146
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:153
 #, php-format
 msgid ""
 "An SQL error has occurred while storing the \"%s\" page. Please try again, "
 "and contact the administrator if the problem persists."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:259
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:266
 msgid "Legal Notices settings"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:295
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:296
 msgid "Legal Notices settings have been saved."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Controllers/MainController.php:298
+#: ../lib/GaletteLegalNotices/Controllers/MainController.php:299
 msgid ""
 "An SQL error has occurred while storing Legal Notices settings. Please try "
 "again, and contact the administrator if the problem persists."
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:91
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:93
 msgid "Your organisation phone number link"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:95
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:97
 msgid "Your organisation email address link"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:522
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:87
-#: ../tempcache/scripts.html.twig:89
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:532
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:89
+#: ../templates/default/scripts.html.twig:26
 msgid "Legal Information"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:530
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:97
-#: ../tempcache/scripts.html.twig:77
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:540
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:99
+#: ../templates/default/scripts.html.twig:22
 msgid "Terms of Service"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:538
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:107
-#: ../tempcache/scripts.html.twig:65
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:548
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:109
+#: ../templates/default/scripts.html.twig:18
 msgid "Privacy Policy"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/Entity/Pages.php:578
+#: ../lib/GaletteLegalNotices/Entity/Pages.php:588
 msgid "Specific to the Legal Notices plugin"
 msgstr ""
 
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:65
-#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:120
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:67
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:122
+#: ../lib/GaletteLegalNotices/PluginGaletteLegalnotices.php:153
 msgid "Legal Notices"
 msgstr ""
 
-#: ../tempcache/legalnotices_page.html.twig:70
+#: ../templates/default/legalnotices_page.html.twig:14
 msgid "Edit this page"
 msgstr ""
 
-#: ../tempcache/legalnotices_page.html.twig:86
+#: ../templates/default/legalnotices_page.html.twig:22
 msgid "Last update"
 msgstr ""
 
-#: ../tempcache/legalnotices_page.html.twig:98
+#: ../templates/default/legalnotices_page.html.twig:26
 msgid "This page has not been translated in your language"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:66
+#: ../templates/default/legalnotices_pages.html.twig:12
 msgid "Choose a page"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:78
+#: ../templates/default/legalnotices_pages.html.twig:18
 msgid "Language"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:126
+#: ../templates/default/legalnotices_pages.html.twig:35
 msgid "Page"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:199
+#: ../templates/default/legalnotices_pages.html.twig:62
 msgid "Page body"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:205
+#: ../templates/default/legalnotices_pages.html.twig:68
 msgid "Or"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:214
+#: ../templates/default/legalnotices_pages.html.twig:73
 msgid "External URL"
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:214
+#: ../templates/default/legalnotices_pages.html.twig:73
 msgid ""
 "Enter the URL that the user will be redirected to instead of displaying the "
 "content defined in the previous field. Setting this option disables editing "
 "of the page body."
 msgstr ""
 
-#: ../tempcache/legalnotices_pages.html.twig:216
+#: ../templates/default/legalnotices_pages.html.twig:78
 msgid "Use a valid external URL"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:70
+#: ../templates/default/legalnotices_settings.html.twig:15
 msgid "Pages"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:76
+#: ../templates/default/legalnotices_settings.html.twig:20
 msgid "Enable the \"Legal Information\" page"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:80
+#: ../templates/default/legalnotices_settings.html.twig:26
 msgid "Enable the \"Terms of Service\" page"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:84
+#: ../templates/default/legalnotices_settings.html.twig:32
 msgid "Enable the \"Privacy Policy\" page"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:91
+#: ../templates/default/legalnotices_settings.html.twig:39
 msgid "Move links in the \"Public pages\" menu"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:91
+#: ../templates/default/legalnotices_settings.html.twig:39
 msgid ""
 "Links are added by default in the footer. Enable this option if you want to "
 "move them in the \"Public pages\" menu."
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:99
+#: ../templates/default/legalnotices_settings.html.twig:45
 msgid "Fallback language for untranslated pages"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:137
+#: ../templates/default/legalnotices_settings.html.twig:59
 msgid "Consent Manager Platform"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:143
+#: ../templates/default/legalnotices_settings.html.twig:64
 msgid "Enable the consent manager"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:143
+#: ../templates/default/legalnotices_settings.html.twig:64
 msgid ""
 "If you enable this option, you must define which services should be included "
 "in the consent manager. Read the plugin documentation to learn how to do "
 "this."
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:147
+#: ../templates/default/legalnotices_settings.html.twig:71
 msgid "Hide the \"Accept all\" button"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:147
-#: ../tempcache/legalnotices_settings.html.twig:151
+#: ../templates/default/legalnotices_settings.html.twig:71
+#: ../templates/default/legalnotices_settings.html.twig:78
 msgid ""
 "Do not enable this option if you need to comply with the european "
 "legislation (GDPR & ePrivacy)."
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:151
+#: ../templates/default/legalnotices_settings.html.twig:78
 msgid "Hide the \"I decline\" button"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:155
+#: ../templates/default/legalnotices_settings.html.twig:85
+msgid "Enable \"localStorage\""
+msgstr ""
+
+#: ../templates/default/legalnotices_settings.html.twig:85
+msgid ""
+"By default, consent information is stored in the browser with a cookie. "
+"Enable this option if you want to use \"locaStorage\" instead."
+msgstr ""
+
+#: ../templates/default/legalnotices_settings.html.twig:93
 msgid "Cookie lifetime"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:155
+#: ../templates/default/legalnotices_settings.html.twig:93
 msgid ""
 "Specify the maximum lifetime of the cookie used to store consent information "
 "in the browser (in days). After this period, the user's consent will be "
 "requested again."
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:159
+#: ../templates/default/legalnotices_settings.html.twig:101
 msgid "Cookie domain"
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:159
+#: ../templates/default/legalnotices_settings.html.twig:101
 msgid ""
 "Use this if you want to get consent once for multiple matching domains. By "
 "default, the current domain is used."
 msgstr ""
 
-#: ../tempcache/legalnotices_settings.html.twig:163
-msgid "Enable \"localStorage\""
-msgstr ""
-
-#: ../tempcache/legalnotices_settings.html.twig:163
-msgid ""
-"By default, consent information is stored in the browser with a cookie. "
-"Enable this option if you want to use \"locaStorage\" instead. If enabled, "
-"setting the options above related to the cookie becomes irrelevant."
-msgstr ""
-
-#: ../tempcache/scripts.html.twig:107
+#: ../templates/default/scripts.html.twig:35
 msgid ""
 "The consent manager could not be loaded. It may have been blocked by an ad "
 "blocker."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:156
+#: ../templates/default/scripts.html.twig:56
 msgid "Services we would like to use"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:160
+#: ../templates/default/scripts.html.twig:57
 msgid ""
 "Here you can assess and customize the services that we'd like to use on this "
 "website. You're in charge! Enable or disable services as you see fit."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:166
+#: ../templates/default/scripts.html.twig:60
 msgid "Testing mode!"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:170
+#: ../templates/default/scripts.html.twig:61
 msgid "There were changes since your last visit, please renew your consent."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:174
+#: ../templates/default/scripts.html.twig:62
 msgid ""
 "Hi! Could we please enable some additional services for {purposes}? You can "
 "always change or withdraw your consent later."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:178
+#: ../templates/default/scripts.html.twig:63
 msgid "Let me choose"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:185
+#: ../templates/default/scripts.html.twig:67
 msgid "Service Provision"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:189
+#: ../templates/default/scripts.html.twig:68
 msgid ""
 "These services are essential for the correct functioning of this website. "
 "You cannot disable them here as the service would not work correctly "
 "otherwise."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:195
+#: ../templates/default/scripts.html.twig:71
 msgid "Performance Optimization"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:199
+#: ../templates/default/scripts.html.twig:72
 msgid ""
 "These services process personal information to optimize the service that "
 "this website offers."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:205
+#: ../templates/default/scripts.html.twig:75
 msgid "Analytics"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:209
+#: ../templates/default/scripts.html.twig:76
 msgid ""
 "These services process personal information to let us know how you use this "
 "website."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:215
+#: ../templates/default/scripts.html.twig:79
 msgid "Marketing"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:219
+#: ../templates/default/scripts.html.twig:80
 msgid ""
 "These services process personal information to show you relevant content "
 "about products, services or topics that you might be interested in."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:225
+#: ../templates/default/scripts.html.twig:83
 msgid "Advertising"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:229
+#: ../templates/default/scripts.html.twig:84
 msgid ""
 "These services process personal information to show you personalized or "
 "interest-based advertisements."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:236
+#: ../templates/default/scripts.html.twig:88
 msgid "service"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:240
+#: ../templates/default/scripts.html.twig:89
 msgid "services"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:245
+#: ../templates/default/scripts.html.twig:91
 msgid "That's ok"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:249
+#: ../templates/default/scripts.html.twig:92
 msgid "Save"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:253
+#: ../templates/default/scripts.html.twig:93
 msgid "I decline"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:257
+#: ../templates/default/scripts.html.twig:94
 msgid "Close"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:261
+#: ../templates/default/scripts.html.twig:95
 msgid "Accept all"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:265
+#: ../templates/default/scripts.html.twig:96
 msgid "Accept selected"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:274
+#: ../templates/default/scripts.html.twig:99
 msgid "privacy policy"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:278
+#: ../templates/default/scripts.html.twig:100
 msgid "To learn more, please read our {privacyPolicy}."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:285
+#: ../templates/default/scripts.html.twig:104
 msgid "Enable or disable all services"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:289
+#: ../templates/default/scripts.html.twig:105
 msgid "Use this switch to enable or disable all services."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:295
+#: ../templates/default/scripts.html.twig:108
 msgid "(opt-out)"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:299
+#: ../templates/default/scripts.html.twig:109
 msgid "This service is loaded by default (but you can opt out)"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:305
+#: ../templates/default/scripts.html.twig:112
 msgid "(always required)"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:309
+#: ../templates/default/scripts.html.twig:113
 msgid "This services is always required"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:314
+#: ../templates/default/scripts.html.twig:115
 msgid "purposes:"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:318
+#: ../templates/default/scripts.html.twig:116
 msgid "purpose:"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:323
+#: ../templates/default/scripts.html.twig:118
 msgid "Realized with Klaro!"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:328
+#: ../templates/default/scripts.html.twig:120
 msgid "Do you want to load external content supplied by {title}?"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:332
+#: ../templates/default/scripts.html.twig:121
 msgid "Yes"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:336
+#: ../templates/default/scripts.html.twig:122
 msgid "Always"
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:351
+#: ../templates/default/scripts.html.twig:134
 msgid ""
 "The cookies used by Galette do not store your personal data and do not track "
 "you."
 msgstr ""
 
-#: ../tempcache/scripts.html.twig:360
+#: ../templates/default/scripts.html.twig:140
 msgid "Consent Manager"
 msgstr ""
