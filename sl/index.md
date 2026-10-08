@@ -162,10 +162,10 @@ analitike.
 
    * `functional` (storitve v tej kategoriji so obvezne in jih uporabnik ne more
      zavrniti)
-   * `performance`
-   * `analytics`
-   * `marketing`
-   * `advertising`
+   * `izvedba`
+   * `analitika`
+   * `trženje`
+   * `oglaševanje`
 
 3. Nazadnje morate v svojo datoteko predloge po meri dodati dejansko kodo, ki jo
    nudi storitev, *vendar z manjšimi spremembami* atributov oznake `script` (za
