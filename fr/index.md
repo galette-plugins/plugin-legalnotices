@@ -1,14 +1,14 @@
 ---
 title: Galette Legal Notices
-description: Plugin pour gérer des pages de mentions légales
+description: Plugin pour gérer des mentions légales
 ---
 
 Ce plugin fournit :
 
 * jusqu'à **3 pages** pour écrire des mentions légales :
-  - *Informations légales* (pour toutes les mentions légales)
-  - *Conditions générales d'utilisation* (dans le cas où vous fournissez des
-    telles conditions)
+  - *Informations légales* (pour toutes les mentions légales communes)
+  - *Conditions générales d'utilisation* (dans le cas où vous avez besoin de
+    fournir des telles conditions)
   - *Politique de confidentialité* (pour toutes les mentions concernant le
     traitement de données personnelles et l'utilisation de cookies)
 * une **Plateforme de Gestion du Consentement** (pour les utilisateurs avancés)
@@ -17,13 +17,14 @@ Ce plugin fournit :
 
 Tout d'abord, téléchargez le plugin :
 
-* [Get latest Legal Notices
-  plugin!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
-* [Get Legal Notices plugin nightly
-  build!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
+* [Obtenez le dernier plugin Legal Notices
+  !](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
+* [Obtenez la nightly du plugin Legal Notices
+  !](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
 
-Extract the downloaded archive into Galette `plugins` directory. For example, on
-Linux (replacing *{url}* and *{version}* with the corresponding values):
+Décompressez l'archive téléchargée dans le répertoire `plugins` de Galette. Par
+exemple, sous Linux (en remplaçant *{url}* et *{version}* par les valeurs
+correspondantes) :
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -41,9 +42,10 @@ Et c'est tout ; le plugin *Legal Notices* est installé. :)
 
 ## Utilisation
 
-Once the plugin is installed, a *Legal Notices* group is added to the Galette
-menu when a user is logged-in, allowing administrators and staff members to
-define the settings of the plugin and edit the content of the pages.
+Une fois le plugin installé, un groupe *Mentions légales* est ajouté au menu de
+Galette lorsqu’un utilisateur est connecté, permettant aux administrateurs et
+membres du bureau de définir les préférences du plugin et de modifier le contenu
+des pages.
 
 ![Menu du plugin](images/menu.jpg)
 
@@ -73,9 +75,9 @@ Plusieurs paramètres permettent de modifier le comportement du plugin :
   consentement une seule fois pour plusieurs domaines qui correspondent. Cela
   suppose que vous utilisiez Klaro! également sur les autres domaines. Par
   défaut, le domaine courant est utilisé.
-* **Enable "localStorage"** : by default, consent information is stored in the
-  browser with a cookie. Enable this option if you want to use "locaStorage"
-  instead.
+* ** Activer "localStorage"** : par défaut, les informations de consentement
+  sont stockées dans le navigateur avec un cookie. Activez cette option si vous
+  voulez utiliser "locaStorage" à la place.
 
 ### Contenu des pages
 
@@ -172,11 +174,11 @@ de les activer dans Galette, comme un service d’analyse d’audience.
    * `marketing`
    * `advertising`
 
-3. Finally, you need to add in your custom template file the code provided by
-   the service, *but with minor changes* to the attributes of the `script` tag
-   (for more explanations, read the second part of the [Getting
-   Started](https://klaro.org/docs/getting-started) chapter in the documentation
-   of the CMP).
+3. Enfin, vous devez ajouter dans votre fichier de gabarit personnalisé le code
+   fourni par le service, *mais avec des modifications mineures* apportées aux
+   attributs de la balise `script` (pour plus d'explications, lisez la deuxième
+   partie du chapitre [Prise en main](https://klaro.org/docs/getting-started) de
+   la documentation de la PGC.
 
    Exemple :
 
