@@ -17,14 +17,13 @@ Ce plugin fournit :
 
 Tout d'abord, téléchargez le plugin :
 
-[![Obtenir la dernière version du plugin Legal Notices
-!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
-[![Obtenir la nightly du plugin Legal Notices
-!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
+* [Get latest Legal Notices
+  plugin!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
+* [Get Legal Notices plugin nightly
+  build!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
 
-Décompressez l'archive téléchargée dans le répertoire `plugins` de Galette. Par
-exemple, sous linux (en remplaçant *{url}* et *{version}* par les valeurs
-correspondantes) :
+Extract the downloaded archive into Galette `plugins` directory. For example, on
+Linux (replacing *{url}* and *{version}* with the corresponding values):
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -42,10 +41,9 @@ Et c'est tout ; le plugin *Legal Notices* est installé. :)
 
 ## Utilisation
 
-Lorsque le plugin est installé, un groupe *Mentions légales* est ajouté au menu
-de Galette lorsqu'un utilisateur est connecté, permettant aux administrateurs et
-membres du bureau de définir les préférences du plugin et modifier le contenu
-des pages.
+Once the plugin is installed, a *Legal Notices* group is added to the Galette
+menu when a user is logged-in, allowing administrators and staff members to
+define the settings of the plugin and edit the content of the pages.
 
 ![Menu du plugin](images/menu.jpg)
 
@@ -75,10 +73,9 @@ Plusieurs paramètres permettent de modifier le comportement du plugin :
   consentement une seule fois pour plusieurs domaines qui correspondent. Cela
   suppose que vous utilisiez Klaro! également sur les autres domaines. Par
   défaut, le domaine courant est utilisé.
-* ** Activer "localStorage"** : par défaut, les informations de consentement
-  sont stockées dans le navigateur avec un cookie. Activez cette option si vous
-  voulez utiliser "locaStorage" à la place. Si elle est activée, le réglage des
-  options ci-dessus relatives au cookie devient indifférent.
+* **Enable "localStorage"** : by default, consent information is stored in the
+  browser with a cookie. Enable this option if you want to use "locaStorage"
+  instead.
 
 ### Contenu des pages
 
@@ -175,11 +172,11 @@ de les activer dans Galette, comme un service d’analyse d’audience.
    * `marketing`
    * `advertising`
 
-3. Enfin, vous devez ajouter dans votre fichier de gabarit personnalisé le code
-   fourni par le service, *mais avec des modifications mineures* apportées aux
-   attributs de la balise `script` (pour plus d'explications, lisez la deuxième
-   partie du chapitre [Prise en main](https://klaro.org/docs/getting-started) de
-   la documentation de la PGC.
+3. Finally, you need to add in your custom template file the code provided by
+   the service, *but with minor changes* to the attributes of the `script` tag
+   (for more explanations, read the second part of the [Getting
+   Started](https://klaro.org/docs/getting-started) chapter in the documentation
+   of the CMP).
 
    Exemple :
 
