@@ -15,11 +15,10 @@ This plugin provides:
 
 First of all, download the plugin:
 
-[![Get latest Legal Notices plugin!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619
-)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0) [![Get Legal Notices plugin nightly build!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619
-)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
+* [Get latest Legal Notices plugin!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
+* [Get Legal Notices plugin nightly build!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
 
-Extract the downloaded archive into Galette `plugins` directory. For example, on linux (replacing *{url}* and *{version}* with correct values):
+Extract the downloaded archive into Galette `plugins` directory. For example, on Linux (replacing *{url}* and *{version}* with the corresponding values):
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -35,7 +34,7 @@ And that’s it; the *Legal Notices* plugin is installed. :)
 
 ## Plugin usage
 
-When the plugin is installed, a *Legal Notices* group is added to the Galette menu when a user is logged in, allowing administrators and staff members to define the settings of the plugin and edit the content of the pages.
+Once the plugin is installed, a *Legal Notices* group is added to the Galette menu when a user is logged-in, allowing administrators and staff members to define the settings of the plugin and edit the content of the pages.
 
 ![Plugin's menu](images/menu.jpg)
 
@@ -55,7 +54,7 @@ Several settings allow to change the plugin's behavior:
 * **Hide the "I decline" button** : do not enable this option if you need to comply with the european legislation (GDPR & ePrivacy).
 * **Cookie lifetime** : specify the maximum lifetime of the cookie used to store consent information in the browser (in days). After this period, the user's consent will be requested again.
 * **Cookie domain** : use this if you want to get consent once for multiple matching domains. This supposes you are using Klaro! too on the other domains. By default, the current domain is used.
-* **Enable "localStorage"** : by default, consent information is stored in the browser with a cookie. Enable this option if you want to use "locaStorage" instead. If enabled, setting the options above related to the cookie becomes irrelevant.
+* **Enable "localStorage"** : by default, consent information is stored in the browser with a cookie. Enable this option if you want to use "locaStorage" instead.
 
 ### Pages content
 
@@ -128,7 +127,7 @@ Thus, the CMP is only useful when you add additional external services for which
    * `marketing`
    * `advertising`
 
-3. Finally, you need to add in your custom template file the actual code provided by the service, *but with minor changes* to the attributes of the `script` tag (for more explanations, read the second part of the [Getting Started](https://klaro.org/docs/getting-started) chapter in the documentation of the CMP).
+3. Finally, you need to add in your custom template file the code provided by the service, *but with minor changes* to the attributes of the `script` tag (for more explanations, read the second part of the [Getting Started](https://klaro.org/docs/getting-started) chapter in the documentation of the CMP).
 
    Example :
 
