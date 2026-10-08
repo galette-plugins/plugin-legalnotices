@@ -16,13 +16,13 @@ Ta vtičnik omogoča:
 
 Najprej prenesite vtičnik:
 
-[![Prenesite najnovejši vtičnik Legal
-Notices!](https://img.shields.io/badge/1.0.0-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=1.0.0&color=ffb619)](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/1.0.0)
-[![Prenesite nočno gradnjo vtičnika Legal
-Notices!](https://img.shields.io/badge/Nightly-LegalNotices-ffb619?style=for-the-badge&logo=php&logoColor=white&label=Nightly&color=ffb619)](https://galette.eu/download/plugins/galette-plugin-legal-notices-dev.tar.bz2)
+* [Get latest Legal Notices
+  plugin!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
+* [Get Legal Notices plugin nightly
+  build!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
 
-Razširite preneseni arhiv v mapo `plugins` programa Galette. Na primer v sistemu
-Linux (pri čemer *{url}* in *{version}* nadomestite z ustreznimi vrednostmi):
+Extract the downloaded archive into Galette `plugins` directory. For example, on
+Linux (replacing *{url}* and *{version}* with the corresponding values):
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -40,9 +40,9 @@ In to je to; vtičnik *Legal Notices* je nameščen. :)
 
 ## Uporaba vtičnika
 
-Po namestitvi vtičnika se v meniju programa Galette – ko je uporabnik prijavljen
-– prikaže skupina *Pravna obvestila*, ki skrbnikom in osebju omogoča določanje
-nastavitev vtičnika ter urejanje vsebine strani.
+Once the plugin is installed, a *Legal Notices* group is added to the Galette
+menu when a user is logged-in, allowing administrators and staff members to
+define the settings of the plugin and edit the content of the pages.
 
 ![Meni vtičnika](images/menu.jpg)
 
@@ -69,10 +69,9 @@ Več nastavitev omogoča spreminjanje delovanja vtičnika:
 * **Domena piškotka**: to možnost uporabite, če želite pridobiti soglasje enkrat
   za več ustreznih domen. To predpostavlja, da na drugih domenah prav tako
   uporabljate Klaro!. Privzeto se uporabi trenutna domena.
-* **Omogoči "localStorage"**: privzeto se podatki o privolitvi v brskalniku
-  shranijo v piškotek. To možnost omogočite, če želite namesto tega uporabiti
-  "localStorage". Če je ta možnost omogočena, nastavitve zgoraj, ki se nanašajo
-  na piškotek, niso več pomembne.
+* **Enable "localStorage"** : by default, consent information is stored in the
+  browser with a cookie. Enable this option if you want to use "locaStorage"
+  instead.
 
 ### Vsebina strani
 
@@ -167,10 +166,11 @@ analitike.
    * `trženje`
    * `oglaševanje`
 
-3. Nazadnje morate v svojo datoteko predloge po meri dodati dejansko kodo, ki jo
-   nudi storitev, *vendar z manjšimi spremembami* atributov oznake `script` (za
-   več razlag preberite drugi del poglavja [Kako
-   začeti](https://klaro.org/docs/getting-started) v dokumentaciji CMP).
+3. Finally, you need to add in your custom template file the code provided by
+   the service, *but with minor changes* to the attributes of the `script` tag
+   (for more explanations, read the second part of the [Getting
+   Started](https://klaro.org/docs/getting-started) chapter in the documentation
+   of the CMP).
 
    Primer:
 
