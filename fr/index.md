@@ -40,7 +40,7 @@ Galette](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
 
 Et c'est tout ; le plugin *Legal Notices* est installé. :)
 
-## Utilisation
+## Utilisation du plugin
 
 Une fois le plugin installé, un groupe *Mentions légales* est ajouté au menu de
 Galette lorsqu’un utilisateur est connecté, permettant aux administrateurs et
