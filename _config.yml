@@ -5,7 +5,7 @@ author: Guillaume AGNIERAY
 maintainer: community
 plugin:
   name: LegalNotices
-  archive: galette-plugin-legalnotices
+  archive: galette-plugin-legal-notices
   min_galette: "1.3.0"
 defaults:
   - scope: {path: ""}
