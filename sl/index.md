@@ -16,13 +16,13 @@ Ta vtičnik omogoča:
 
 Najprej prenesite vtičnik:
 
-* [Get latest Legal Notices
-  plugin!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
-* [Get Legal Notices plugin nightly
-  build!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
+* [Pridobite najnovejši vtičnik za pravna
+  obvestila!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
+* [Pridobite vtičnik za pravna obvestila vsako
+  noč!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
 
-Extract the downloaded archive into Galette `plugins` directory. For example, on
-Linux (replacing *{url}* and *{version}* with the corresponding values):
+Ekstrahirajte preneseni arhiv v imenik Galette `plugins`. Na primer v sistemu
+Linux (zamenjava *{url}* in *{version}* z ustreznima vrednostma):
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -40,9 +40,9 @@ In to je to; vtičnik *Legal Notices* je nameščen. :)
 
 ## Uporaba vtičnika
 
-Once the plugin is installed, a *Legal Notices* group is added to the Galette
-menu when a user is logged-in, allowing administrators and staff members to
-define the settings of the plugin and edit the content of the pages.
+Ko je vtičnik nameščen, se v meni Galette, ko je uporabnik prijavljen, doda
+skupina *Pravna obvestila*, kar administratorjem in članom osebja omogoča, da
+določijo nastavitve vtičnika in urejajo vsebino strani.
 
 ![Meni vtičnika](images/menu.jpg)
 
@@ -69,9 +69,9 @@ Več nastavitev omogoča spreminjanje delovanja vtičnika:
 * **Domena piškotka**: to možnost uporabite, če želite pridobiti soglasje enkrat
   za več ustreznih domen. To predpostavlja, da na drugih domenah prav tako
   uporabljate Klaro!. Privzeto se uporabi trenutna domena.
-* **Enable "localStorage"** : by default, consent information is stored in the
-  browser with a cookie. Enable this option if you want to use "locaStorage"
-  instead.
+* **Omogoči "localStorage"** : privzeto se informacije o soglasju shranijo v
+  brskalnik s piškotkom. Omogočite to možnost, če želite namesto tega uporabiti
+  »locaStorage«.
 
 ### Vsebina strani
 
@@ -166,11 +166,10 @@ analitike.
    * `trženje`
    * `oglaševanje`
 
-3. Finally, you need to add in your custom template file the code provided by
-   the service, *but with minor changes* to the attributes of the `script` tag
-   (for more explanations, read the second part of the [Getting
-   Started](https://klaro.org/docs/getting-started) chapter in the documentation
-   of the CMP).
+3. Na koncu morate v svojo datoteko predloge po meri dodati kodo, ki jo ponuja
+   storitev, *vendar z manjšimi spremembami* atributov oznake `script` (za več
+   razlag preberite drugi del poglavja [Kako
+   začeti](https://klaro.org/docs/getting-started) v dokumentaciji CMP).
 
    Primer:
 
