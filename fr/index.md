@@ -75,9 +75,9 @@ Plusieurs paramètres permettent de modifier le comportement du plugin :
   consentement une seule fois pour plusieurs domaines qui correspondent. Cela
   suppose que vous utilisiez Klaro! également sur les autres domaines. Par
   défaut, le domaine courant est utilisé.
-* ** Activer "localStorage"** : par défaut, les informations de consentement
-  sont stockées dans le navigateur avec un cookie. Activez cette option si vous
-  voulez utiliser "locaStorage" à la place.
+* **Activer "localStorage"** : par défaut, les informations de consentement sont
+  stockées dans le navigateur avec un cookie. Activez cette option si vous
+  souhaitez utiliser "locaStorage" à la place.
 
 ### Contenu des pages
 
