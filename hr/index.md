@@ -1,28 +1,28 @@
 ---
-title: Galette Legal Notices
-description: Plugin to manage legal notices
+title: Galette pravne obavjesti
+description: Dodatak za upravljanje pravnim obavijestima
 ---
 
-This plugin provides:
+Dodatak omogućuje:
 
-* up to **3 pages** to write down legal notices :
-  - *Legal Information* (for all common legal notices)
-  - *Terms of Service* (in case you need to provide such terms)
-  - *Privacy Policy* (for all notices regarding personal data processing and the
-    use of cookies)
-* a **Consent Management Platform** (for advanced users)
+* do **3 stranice** za pravne obavijesti:
+  - *Pravne informacije* (za opće pravne obavijesti)
+  - *Uvjeti korištenja* (ako ih trebate objaviti)
+  - *Pravila privatnosti* (za obavijesti o obradi osobnih podataka i uporabi
+    kolačića)
+* **platformu za upravljanje privolama** za napredne korisnike
 
-## Installation
+## Instalacija
 
-First of all, download the plugin:
+Najprije preuzmite dodatak:
 
-* [Get latest Legal Notices
-  plugin!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
-* [Get Legal Notices plugin nightly
-  build!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
+* [Preuzmite najnoviji dodatak Legal
+  Notices!](https://github.com/galette-plugins/plugin-legalnotices/releases/latest)
+* [Preuzmite noćnu razvojnu verziju dodatka Legal
+  Notices!](https://github.com/galette-plugins/plugin-legalnotices/releases/tag/nightly)
 
-Extract the downloaded archive into Galette `plugins` directory. For example, on
-Linux (replacing *{url}* and *{version}* with the corresponding values):
+Raspakirajte preuzetu arhivu u Galetteovu mapu `plugins`. Primjerice, na Linuxu
+(zamijenite *{url}* i *{version}* odgovarajućim vrijednostima):
 
 ```
 $ cd /var/www/html/galette/plugins
@@ -30,59 +30,55 @@ $ wget {url}
 $ tar xjvf galette-plugin-legal-notices-{version}.tar.bz2
 ```
 
-## Database initialisation
+## Inicijalizacija baze podataka
 
-In order to work, this plugin requires several tables in the database. See the
-[Galette plugins management
-interface](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
+Dodatak zahtijeva nekoliko tablica u bazi. Pogledajte [sučelje za upravljanje
+dodacima
+Galettea](https://doc.galette.eu/en/master/plugins/index.html#plugins-managment).
 
-And that’s it; the *Legal Notices* plugin is installed. :)
+Gotovo; dodatak *Legal Notices* je instaliran. :)
 
-## Plugin usage
+## Uporaba dodatka
 
-Once the plugin is installed, a *Legal Notices* group is added to the Galette
-menu when a user is logged-in, allowing administrators and staff members to
-define the settings of the plugin and edit the content of the pages.
+Nakon instalacije prijavljenom se korisniku u izborniku pojavljuje odjeljak
+*Pravne obavijesti*. Administratori i uprava mogu podesiti dodatak i uređivati
+sadržaj stranica.
 
-![Plugin's menu](images/menu.jpg)
+![Izbornik dodatka](images/menu.jpg)
 
-### Settings
+### Postavke
 
-![Settings screen](images/settings.jpg)
+![Stranica postavki](images/settings.jpg)
 
-Several settings allow to change the plugin's behavior:
+Ponašanje dodatka možete prilagoditi sljedećim postavkama:
 
-* **Enable the "Legal Information" page**
-* **Enable the "Terms of Service" page**
-* **Enable the "Privacy Policy" page**
-* **Move links in the "Public pages" menu** : links are added by default in the
-  footer. Enable this option if you want to move them in the "Public pages"
-  menu.
-* **Fallback language for untranslated pages**
-* **Enable the consent manager**
-* **Hide the "Accept all" button** : do not enable this option if you need to
-  comply with the european legislation (GDPR & ePrivacy).
-* **Hide the "I decline" button** : do not enable this option if you need to
-  comply with the european legislation (GDPR & ePrivacy).
-* **Cookie lifetime** : specify the maximum lifetime of the cookie used to store
-  consent information in the browser (in days). After this period, the user's
-  consent will be requested again.
-* **Cookie domain** : use this if you want to get consent once for multiple
-  matching domains. This supposes you are using Klaro! too on the other domains.
-  By default, the current domain is used.
-* **Enable "localStorage"** : by default, consent information is stored in the
-  browser with a cookie. Enable this option if you want to use "locaStorage"
-  instead.
+* **Omogući stranicu „Pravne informacije”**
+* **Omogući stranicu „Uvjeti korištenja”**
+* **Omogući stranicu „Pravila privatnosti”**
+* **Premjesti poveznice u izbornik „Javne stranice”**: poveznice se zadano
+  dodaju u podnožje. Ovom ih opcijom premještate u izbornik „Javne stranice”.
+* **Zamjenski jezik za neprevedene stranice**
+* **Uključi upravljanje privolama**
+* **Sakrij gumb „Prihvati sve”**: nemojte uključiti ako morate poštovati
+  europske propise (GDPR i ePrivacy).
+* **Sakrij gumb „Odbijam”**: nemojte uključiti ako morate poštovati europske
+  propise (GDPR i ePrivacy).
+* **Trajanje kolačića**: najdulje trajanje kolačića koji čuva privolu u
+  pregledniku, u danima. Nakon toga korisnika se ponovno pita za privolu.
+* **Domena kolačića**: koristite ako želite jednom prikupiti privolu za više
+  odgovarajućih domena. Klaro! mora biti prisutan i na ostalim domenama. Zadano
+  se koristi trenutačna domena.
+* **Uključi „localStorage”**: privola se zadano čuva u kolačiću. Uključite
+  opciju ako želite koristiti lokalnu pohranu „localStorage”.
 
-### Pages content
+### Sadržaj stranica
 
-![Pages content screen](images/content.jpg)
+![Stranica sadržaja](images/content.jpg)
 
-The content of each **page** can be edited in every available **language**.
+Sadržaj svake **stranice** može se uređivati na svakom dostupnom **jeziku**.
 
-It is possible to edit the **page body** with the WYSIWYG editor. The following
-replacements values can be used (refer to the inline help from the user
-interface to get details) :
+**Tijelo stranice** može se uređivati vizualnim uređivačem. Dostupne su sljedeće
+zamjenske vrijednosti; pojedinosti potražite u pomoći unutar sučelja:
 
 * `{ASSO_NAME}`
 * `{ASSO_SLOGAN}`
@@ -94,52 +90,49 @@ interface to get details) :
 * `{ASSO_PHONE_LINK}`
 * `{ASSO_EMAIL_LINK}`
 
-It is also possible to define an **external URL** when such a page already
-exists (on the association's website, for example). If it is defined, editing of
-the page body will be disabled, and users will be redirected to this URL.
+Ako stranica već postoji, primjerice na web-stranici udruge, možete zadati
+**vanjski URL**. Tada se uređivanje tijela stranice isključuje i korisnici se
+preusmjeravaju na tu adresu.
 
-If both fields remain empty, the content of the *fallback language* chosen in
-the settings will be displayed to the users.
+Ako oba polja ostanu prazna, prikazuje se sadržaj na *zamjenskom jeziku*
+odabranom u postavkama.
 
-### About the Consent Manager Platform
+### O platformi za upravljanje privolama
 
-> **Note** — Using the Consent Management Plateform (CMP) requires that you
-> understand and know how to write JavaScript code.
+> **Napomena** — Uporaba platforme za upravljanje privolama (CMP) zahtijeva
+> razumijevanje i pisanje JavaScript koda.
 
-Enabling the CMP in the settings does nothing useful on its own. By default, it
-will only display a message about the functional cookies stored by Galette.
+Samo uključivanje CMP-a u postavkama nema posebnu svrhu. Zadano prikazuje samo
+obavijest o funkcionalnim kolačićima koje Galette pohranjuje.
 
-![Consent Manager modal](images/cmp-modal.jpg)
+![Prozor upravljanja privolama](images/cmp-modal.jpg)
 
-It will also add a link in the footer to open the Consent Manager after consent
-has already been received.
+U podnožje se dodaje i poveznica za otvaranje upravljanja privolama nakon
+davanja privole.
 
-![CMP link in footer](images/cmp-footer.jpg)
+![Poveznica CMP-a u podnožju](images/cmp-footer.jpg)
 
-Thus, the CMP is only useful when you add additional external services for which
-user consent is required to enable them in Galette, such as an analytics
-service.
+CMP je stoga koristan kad dodate vanjske usluge za čije uključivanje treba
+privola korisnika, primjerice analitičku uslugu.
 
-![CMP message](images/cmp-message.jpg)
+![Poruka CMP-a](images/cmp-message.jpg)
 
-### How to add an external service ?
+### Dodavanje vanjske usluge
 
-> **Note** — This plugin uses [Klaro!](https://github.com/klaro-org/klaro-js) as
-> its Consent Management Platform (CMP). The following code examples describe
-> how to add a simple additional service. Please, read [Klaro!
-> documentation](https://klaro.org/docs) for further details and a better
-> understanding.
+> **Napomena** — Dodatak koristi [Klaro!](https://github.com/klaro-org/klaro-js)
+> kao platformu za upravljanje privolama (CMP). Sljedeći primjeri pokazuju
+> dodavanje jednostavne usluge. Za pojedinosti i bolje razumijevanje pročitajte
+> [dokumentaciju Klaro!](https://klaro.org/docs).
 
-1. First, you have to create a custom template file named
-   `local_klaro_config.html.twig` in the `templates/default` folder of the
-   plugin.
+1. Najprije u mapi dodatka `templates/default` izradite vlastiti predložak
+   `local_klaro_config.html.twig`.
 
-2. Then, you need to add the service in the CMP. Use the following code in your
-   custom template file (adjust it to your needs ; you can find more details in
-   the documentation of the CMP ; please read the [Annotated Config
-   File](https://klaro.org/docs/integration/annotated-configuration)).
+2. Zatim dodajte uslugu u CMP. Sljedeći kod unesite u svoj predložak i
+   prilagodite potrebama. Pojedinosti su u dokumentaciji CMP-a, posebice u
+   [konfiguracijskoj datoteci s
+   komentarima](https://klaro.org/docs/integration/annotated-configuration).
 
-   Example :
+   Primjer:
 
    ```
    <script type="text/javascript">
@@ -156,23 +149,21 @@ service.
    </script>
    ```
 
-   The plugin provides several predefined `purposes` to organize addtional
-   services in the Consent Manager :
+   Dodatak nudi nekoliko unaprijed definiranih vrijednosti `purposes` za
+   razvrstavanje usluga u upravljanju privolama:
 
-   * `functional` (services in this category are mandatory and cannot be
-     declined by the user)
+   * `functional` (usluge ove kategorije obvezne su i korisnik ih ne može
+     odbiti)
    * `performance`
    * `analytics`
    * `marketing`
    * `advertising`
 
-3. Finally, you need to add in your custom template file the code provided by
-   the service, *but with minor changes* to the attributes of the `script` tag
-   (for more explanations, read the second part of the [Getting
-   Started](https://klaro.org/docs/getting-started) chapter in the documentation
-   of the CMP).
+3. Na kraju u svoj predložak dodajte kod pružatelja usluge, *uz manje izmjene*
+   atributa oznake `script`. Objašnjenje je u drugom dijelu poglavlja [Getting
+   Started](https://klaro.org/docs/getting-started) u dokumentaciji CMP-a.
 
-   Example :
+   Primjer:
 
    ```
    <script type="text/plain" data-type="application/javascript" data-src="https://YOUR_MATOMO_URL" data-name="matomo"></script>
