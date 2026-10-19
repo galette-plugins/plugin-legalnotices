@@ -74,7 +74,7 @@ class MainController extends AbstractPluginController
                 'cur_name'          => $name,
                 'page'              => $page,
                 'html_editor'       => true,
-                'documentation'     => 'https://galette-plugins.github.io/plugin-legalnotices/documentation.html#pages-content'
+                'documentation'     => 'https://galette-plugins.github.io/plugin-legalnotices/' . ($this->i18n->getAbbrev() !== 'en' ? $this->i18n->getAbbrev() : '') . '#pages-content'
             ]
         );
         return $response;
@@ -266,7 +266,7 @@ class MainController extends AbstractPluginController
             'page_title' => _T("Legal Notices settings", "legalnotices"),
             'settings' => $settings,
             'langlist' => $this->i18n->getList(),
-            'documentation' => 'https://galette-plugins.github.io/plugin-legalnotices/documentation.html#settings'
+            'documentation' => 'https://galette-plugins.github.io/plugin-legalnotices/' . ($this->i18n->getAbbrev() !== 'en' ? $this->i18n->getAbbrev() : '') . '#settings'
         ];
 
         // Display page
