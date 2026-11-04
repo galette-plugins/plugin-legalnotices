@@ -94,8 +94,8 @@ uporabniškem vmesniku):
 * `{ASSO_EMAIL_LINK}`
 
 Prav tako je mogoče določiti **zunanji URL**, če takšna stran že obstaja (na
-primer na spletnem mestu združenja). Če je ta določen, bo urejanje vsebine
-strani onemogočeno, uporabniki pa bodo preusmerjeni na navedeni URL.
+primer na spletnem mestu društva). Če je ta določen, bo urejanje vsebine strani
+onemogočeno, uporabniki pa bodo preusmerjeni na ta URL naslov.
 
 Če obe polji ostaneta prazni, se uporabnikom prikaže vsebina v *nadomestnem
 jeziku*, izbranem v nastavitvah.
