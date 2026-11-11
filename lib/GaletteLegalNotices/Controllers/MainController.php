@@ -42,12 +42,8 @@ class MainController extends AbstractPluginController
      */
     public function listPages(Response $response, ?string $lang = null, ?string $name = null): Response
     {
-        if ($lang === null) {
-            $lang = $this->preferences->pref_lang;
-        }
-        if ($name === null) {
-            $name = Pages::DEFAULT_NAME;
-        }
+        $lang ??= $this->preferences->pref_lang;
+        $name ??= Pages::DEFAULT_NAME;
 
         $pages = new Pages($this->preferences, $this->routeparser);
         //all pages are listed
@@ -116,7 +112,7 @@ class MainController extends AbstractPluginController
         $url = trim((string)($post['external_url'] ?? ''));
 
         //only known pages, in known languages
-        if (!in_array($cur_name, Pages::NAMES, true) || !array_key_exists($cur_lang, $this->i18n->getArrayList())) {
+        if (!in_array($cur_name, Pages::NAMES, strict: true) || !array_key_exists($cur_lang, $this->i18n->getArrayList())) {
             throw new HttpNotFoundException($request);
         }
 
@@ -131,10 +127,10 @@ class MainController extends AbstractPluginController
             );
         } else {
             $stored = $pages->storePageContent(
-                $cur_name,
-                $cur_lang,
-                $body,
-                $url
+                name: $cur_name,
+                lang: $cur_lang,
+                body: $body,
+                url: $url
             );
 
             if ($stored) {
@@ -300,7 +296,7 @@ class MainController extends AbstractPluginController
             }
         }
 
-        if (!empty($errors_detected)) {
+        if ($errors_detected !== []) {
             $this->session->entered_settings = $post;
             foreach ($errors_detected as $error) {
                 $this->flash->addMessage(

@@ -76,7 +76,12 @@ class MainController extends GaletteRoutingTestCase
         $pages = new Pages($this->preferences, $this->routeparser);
         $pages->getPages('legal-information', \Galette\Core\I18n::DEFAULT_LANG);
         $this->assertTrue(
-            $pages->storePageContent('legal-information', \Galette\Core\I18n::DEFAULT_LANG, self::UNSAFE_BODY, '')
+            $pages->storePageContent(
+                name: 'legal-information',
+                lang: \Galette\Core\I18n::DEFAULT_LANG,
+                body: self::UNSAFE_BODY,
+                url: ''
+            )
         );
 
         $stored = $this->getStoredBody('legal-information');
@@ -187,7 +192,12 @@ class MainController extends GaletteRoutingTestCase
         $this->setSetting('enable_legal_information', '1');
         $pages = new Pages($this->preferences, $this->routeparser);
         $pages->getPages('legal-information', \Galette\Core\I18n::DEFAULT_LANG);
-        $pages->storePageContent('legal-information', \Galette\Core\I18n::DEFAULT_LANG, '', 'https://example.org/legal');
+        $pages->storePageContent(
+            name: 'legal-information',
+            lang: \Galette\Core\I18n::DEFAULT_LANG,
+            body: '',
+            url: 'https://example.org/legal'
+        );
 
         $test_response = $this->app->handle(
             $this->createRequest('legalnotices_page', ['name' => 'legal-information'])

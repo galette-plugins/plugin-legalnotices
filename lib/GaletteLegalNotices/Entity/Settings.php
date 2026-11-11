@@ -74,8 +74,6 @@ class Settings
         'enable_privacy_policy'
     ];
 
-    private Db $zdb;
-
     /**
      * Main constructor
      *
@@ -84,9 +82,8 @@ class Settings
      *
      * @return void
      */
-    public function __construct(Db $zdb, bool $load = true)
+    public function __construct(private readonly Db $zdb, bool $load = true)
     {
-        $this->zdb = $zdb;
         if ($load) {
             $this->load();
             $this->checkUpdate();
@@ -169,7 +166,7 @@ class Settings
                 }
             }
             return true;
-        } catch (Throwable $e) {
+        } catch (Throwable) {
             Analog::log(
                 'Legal Notices settings cannot be loaded.',
                 Analog::URGENT
@@ -341,7 +338,7 @@ class Settings
             } while ($e = $e->getPrevious());
 
             Analog::log(
-                'Unable to store Legal Notices settings | ' . print_r($messages, true),
+                'Unable to store Legal Notices settings | ' . print_r($messages, return: true),
                 Analog::WARNING
             );
             return false;

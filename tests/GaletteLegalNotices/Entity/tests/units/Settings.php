@@ -42,14 +42,10 @@ class Settings extends GaletteTestCase
         foreach ($settings->getDefaults() as $key => $expected) {
             $value = $settings->$key;
 
-            switch ($key) {
-                case 'fallback_language':
-                    $this->assertSame('en_US', $value);
-                    break;
-                default:
-                    $this->assertEquals($expected, $value, 'Wrong value for ' . $key);
-                    break;
-            }
+            match ($key) {
+                'fallback_language' => $this->assertSame('en_US', $value),
+                default => $this->assertEquals($expected, $value, 'Wrong value for ' . $key),
+            };
         }
 
         //try to set and get a non existent value
