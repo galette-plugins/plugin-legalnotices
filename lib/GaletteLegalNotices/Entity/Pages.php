@@ -57,12 +57,8 @@ class Pages
     {
         global $zdb, $login, $container;
         $this->preferences = $preferences;
-        if ($routeparser === null) {
-            $routeparser = $container->get(RouteParser::class);
-        }
-        if ($login === null) {
-            $login = $container->get('login');
-        }
+        $routeparser ??= $container->get(RouteParser::class);
+        $login ??= $container->get('login');
         $this->routeparser = $routeparser;
         $this
             ->setDb($zdb)
@@ -583,7 +579,7 @@ class Pages
         unset($legend['main']['patterns']['login_uri']);
         unset($legend['main']['patterns']['asso_footer']);
 
-        $patterns = $this->getPagesPatterns(false);
+        $patterns = $this->getPagesPatterns(legacy: false);
         $legend['pages'] = [
             'title'     => _T("Specific to the Legal Notices plugin", "legalnotices"),
             'patterns'  => $patterns

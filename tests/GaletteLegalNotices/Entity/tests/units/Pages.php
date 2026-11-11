@@ -58,13 +58,13 @@ class Pages extends GaletteTestCase
             $this->assertGreaterThanOrEqual($count_pages, $result->last_value, 'Incorrect texts sequence ' . $result->last_value);
 
             $this->zdb->db->query(
-                'SELECT setval(\'' . $this->zdb->getSequenceName(LEGALNOTICES_PREFIX . $pages::TABLE, $pages::PK, true) . '\', 1)',
+                'SELECT setval(\'' . $this->zdb->getSequenceName(LEGALNOTICES_PREFIX . $pages::TABLE, $pages::PK, prefixed: true) . '\', 1)',
                 Adapter::QUERY_MODE_EXECUTE
             );
         }
 
         //reinstall pages
-        $pages->installInit(false);
+        $pages->installInit(check_first: false);
 
         $list = $pages->getNames(\Galette\Core\I18n::DEFAULT_LANG);
         $this->assertCount($count_pages, $list);
@@ -117,7 +117,7 @@ class Pages extends GaletteTestCase
             $this->preferences
         );
 
-        $pages->storePageContent('legal-information', 'en_US', $page_body, '');
+        $pages->storePageContent(name: 'legal-information', lang: 'en_US', body: $page_body, url: '');
         $pages->getPages('legal-information', 'en_US');
         $this->assertSame(
             'Galette | '
