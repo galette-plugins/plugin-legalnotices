@@ -97,6 +97,17 @@ jobs:
           cd galette-core/galette/plugins/plugin-legalnotices
           ../../vendor/bin/php-cs-fixer check --show-progress=dots --verbose --diff
 
+      # Core configuration, with the plugin paths given on the command line;
+      # run from the core root, where withPhpSets() reads the PHP version
+      - name: Rector
+        if: matrix.php-is-min
+        run: |
+          cd galette-core
+          galette/vendor/bin/rector process --dry-run --ansi \
+            galette/plugins/plugin-legalnotices/lib \
+            galette/plugins/plugin-legalnotices/tests \
+            galette/plugins/plugin-legalnotices/*.php
+
       - name: Twig CS
         run: |
           cd galette-core/galette/plugins/plugin-legalnotices
